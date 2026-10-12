@@ -1,7 +1,7 @@
 <?php
 return [
     'media_base' => 'media/algyr',
-    'asset_version' => '20261012-9',
+    'asset_version' => '20261012-10',
     'include_assets' => true,
     // Pin travel, excluding the visible stage: 400vh.
     'scroll_screens' => 4,

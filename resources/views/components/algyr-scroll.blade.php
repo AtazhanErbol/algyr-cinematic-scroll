@@ -72,11 +72,6 @@
                 <div class="algyr-scroll-progress" aria-hidden="true"><span data-algyr-progress></span></div>
             </aside>
         </div>
-        <div class="algyr-scroll-actions">
-            <span class="algyr-scroll-hint">{{ __('algyr-platform.scroll') }} <span aria-hidden="true">↓</span></span>
-            <button type="button" data-algyr-static data-static-label="{{ __('algyr-platform.static') }}" data-motion-label="{{ __('algyr-platform.motion') }}" aria-pressed="false" hidden>{{ __('algyr-platform.static') }}</button>
-            <a href="#{{ $componentId }}-after" data-algyr-skip>{{ __('algyr-platform.skip') }} <span aria-hidden="true">↓</span></a>
-        </div>
     </div>
     <div id="{{ $componentId }}-after" class="algyr-scroll-after" tabindex="-1"></div>
 </section>

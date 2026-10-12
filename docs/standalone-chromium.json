@@ -1,6 +1,6 @@
 {
   "engine": "chromium",
-  "passed": 163,
+  "passed": 167,
   "checks": {
     "desktop_pin_distance": true,
     "desktop_header_clear": true,
@@ -28,12 +28,10 @@
     "desktop_ending_dead_zone": true,
     "desktop_reverse_mask_pixels": true,
     "desktop_step_navigation": true,
-    "desktop_skip_exits": true,
+    "desktop_no_action_buttons": true,
     "desktop_resize_mobile_one_pin": true,
     "desktop_resize_restores_one_pin": true,
     "desktop_fractional_width": true,
-    "desktop_manual_static": true,
-    "desktop_manual_animation_restore": true,
     "desktop_no_cta": true,
     "desktop-large_pin_distance": true,
     "desktop-large_header_clear": true,
@@ -91,13 +89,21 @@
     "android_ending_dead_zone": true,
     "android_reverse_mask_pixels": true,
     "android_step_navigation": true,
-    "android_skip_exits": true,
+    "android_no_action_buttons": true,
     "android_resize_mobile_one_pin": true,
     "android_resize_restores_one_pin": true,
     "android_fractional_width": true,
-    "android_manual_static": true,
-    "android_manual_animation_restore": true,
     "android_no_cta": true,
+    "comment-size_pin_distance": true,
+    "comment-size_header_clear": true,
+    "comment-size_stage_fits": true,
+    "comment-size_frame_scrub": true,
+    "comment-size_no_overflow": true,
+    "comment-size_equal_ratio": true,
+    "comment-size_captions_hidden_during_camera": true,
+    "comment-size_scroll_owner": true,
+    "comment-size_no_native_player": true,
+    "comment-size_single_pin": true,
     "mobile-small_pin_distance": true,
     "mobile-small_header_clear": true,
     "mobile-small_stage_fits": true,
@@ -124,12 +130,10 @@
     "mobile-small_ending_dead_zone": true,
     "mobile-small_reverse_mask_pixels": true,
     "mobile-small_step_navigation": true,
-    "mobile-small_skip_exits": true,
+    "mobile-small_no_action_buttons": true,
     "mobile-small_resize_mobile_one_pin": true,
     "mobile-small_resize_restores_one_pin": true,
     "mobile-small_fractional_width": true,
-    "mobile-small_manual_static": true,
-    "mobile-small_manual_animation_restore": true,
     "mobile-small_no_cta": true,
     "android-landscape_pin_distance": true,
     "android-landscape_header_clear": true,
@@ -204,8 +208,8 @@
       "ownedLenis": true,
       "top": 102,
       "bottom": 900,
-      "actionsBottom": 872.984375,
-      "ratio": 1.7778259853819711,
+      "detailsBottom": 872.984375,
+      "ratio": 1.7778279861424913,
       "horizontal": 0,
       "priority": [
         "f_000.webp",
@@ -220,8 +224,8 @@
         "mean": 0.039705946180555556
       },
       "reverseMaskDifference": {
-        "max": 3,
-        "mean": 0.005207774079244067
+        "max": 2,
+        "mean": 0.005201165244517846
       }
     },
     "desktop-large": {
@@ -259,7 +263,7 @@
       "ownedLenis": true,
       "top": 102,
       "bottom": 1080,
-      "actionsBottom": 1032.90625,
+      "detailsBottom": 1007.65625,
       "ratio": 1.7777777777777777,
       "horizontal": 0
     },
@@ -298,8 +302,8 @@
       "ownedLenis": true,
       "top": 102,
       "bottom": 768,
-      "actionsBottom": 744.953125,
-      "ratio": 1.777837862196386,
+      "detailsBottom": 744.953125,
+      "ratio": 1.7778389647169885,
       "horizontal": 0
     },
     "tablet": {
@@ -337,7 +341,7 @@
       "ownedLenis": true,
       "top": 68,
       "bottom": 1024,
-      "actionsBottom": 875.859375,
+      "detailsBottom": 850.609375,
       "ratio": 1.7777777777777777,
       "horizontal": 0
     },
@@ -376,7 +380,7 @@
       "ownedLenis": false,
       "top": 68,
       "bottom": 915,
-      "actionsBottom": 756.171875,
+      "detailsBottom": 730.171875,
       "ratio": 1.7777777777777777,
       "horizontal": 0,
       "priority": [
@@ -392,9 +396,48 @@
         "mean": 0.05005229766803841
       },
       "reverseMaskDifference": {
-        "max": 4,
-        "mean": 0.009274020807833537
+        "max": 5,
+        "mean": 0.013391217870257039
       }
+    },
+    "comment-size": {
+      "mode": "mobile",
+      "ready": true,
+      "variant": "mobile",
+      "progress": 0.299929,
+      "scene": "student",
+      "start": 24,
+      "end": 2838,
+      "pinOffset": 68,
+      "steps": [
+        0.685,
+        0.74162,
+        0.78762,
+        0.8336199999999999,
+        0.87962,
+        0.9256199999999999
+      ],
+      "phases": {
+        "videoStart": 0.05,
+        "videoEnd": 0.65,
+        "screensStart": 0.72,
+        "screensEnd": 0.95
+      },
+      "currentStep": -1,
+      "frame": 50,
+      "desiredFrame": 50,
+      "loadedFrames": 120,
+      "decodedFrames": 6,
+      "sequenceBytes": 2001236,
+      "frameFailures": 0,
+      "nativePlayerElements": 0,
+      "lenis": false,
+      "ownedLenis": false,
+      "top": 68,
+      "bottom": 804,
+      "detailsBottom": 705.578125,
+      "ratio": 1.7777777777777777,
+      "horizontal": 0
     },
     "mobile-small": {
       "mode": "mobile",
@@ -431,7 +474,7 @@
       "ownedLenis": false,
       "top": 68,
       "bottom": 568,
-      "actionsBottom": 540.59375,
+      "detailsBottom": 514.59375,
       "ratio": 1.7777777777777777,
       "horizontal": 0,
       "priority": [
@@ -448,7 +491,7 @@
       },
       "reverseMaskDifference": {
         "max": 3,
-        "mean": 0.0017933601738241308
+        "mean": 0.006453167603953647
       }
     },
     "android-landscape": {
@@ -486,8 +529,8 @@
       "ownedLenis": false,
       "top": 68,
       "bottom": 412,
-      "actionsBottom": 404,
-      "ratio": 1.7777777777777777,
+      "detailsBottom": 333.6875,
+      "ratio": 1.7778545242016897,
       "horizontal": 0
     },
     "tablet-touch": {
@@ -525,9 +568,10 @@
       "ownedLenis": false,
       "top": 102,
       "bottom": 768,
-      "actionsBottom": 752,
-      "ratio": 1.7777777777777777,
+      "detailsBottom": 751.984375,
+      "ratio": 1.7778321108394457,
       "horizontal": 0
     }
-  }
+  },
+  "revision": "20261012-10"
 }

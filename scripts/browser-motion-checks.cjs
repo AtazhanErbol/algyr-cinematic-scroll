@@ -14,7 +14,7 @@ async (page) => {
  const canvas=p=>p.locator('[data-algyr-canvas]').evaluate(c=>c.toDataURL());
  const profiles=engine==='webkit'
  ? [{name:'safari-desktop',w:1440,h:900},{name:'iphone',w:390,h:844,touch:true},{name:'iphone-small',w:375,h:667,touch:true},{name:'iphone-landscape',w:844,h:390,touch:true}]
- : [{name:'desktop',w:1440,h:900},{name:'desktop-large',w:1920,h:1080},{name:'laptop',w:1366,h:768},{name:'tablet',w:768,h:1024},{name:'android',w:412,h:915,touch:true},{name:'mobile-small',w:320,h:568,touch:true},{name:'android-landscape',w:915,h:412,touch:true},{name:'tablet-touch',w:1024,h:768,touch:true}];
+ : [{name:'desktop',w:1440,h:900},{name:'desktop-large',w:1920,h:1080},{name:'laptop',w:1366,h:768},{name:'tablet',w:768,h:1024},{name:'android',w:412,h:915,touch:true},{name:'comment-size',w:518,h:804,touch:true},{name:'mobile-small',w:320,h:568,touch:true},{name:'android-landscape',w:915,h:412,touch:true},{name:'tablet-touch',w:1024,h:768,touch:true}];
  for(const profile of profiles) {
   const ctx=await browser.newContext({viewport:{width:profile.w,height:profile.h},deviceScaleFactor:profile.touch?2:1,isMobile:!!profile.touch,hasTouch:!!profile.touch});
   const p=await ctx.newPage(),requests=[];
@@ -27,13 +27,13 @@ async (page) => {
    await ready(p);await go(p,.30);
    const s=await get(p);
    const rects=await p.evaluate(()=>{
-    const r=document.querySelector('[data-algyr-scroll]'),stage=r.querySelector('[data-algyr-stage]').getBoundingClientRect(),m=r.querySelector('[data-algyr-media]').getBoundingClientRect(),actions=r.querySelector('.algyr-scroll-actions').getBoundingClientRect();
-    return {top:stage.top,bottom:stage.bottom,actionsBottom:actions.bottom,ratio:m.width/m.height,horizontal:document.documentElement.scrollWidth-document.documentElement.clientWidth};
+    const r=document.querySelector('[data-algyr-scroll]'),stage=r.querySelector('[data-algyr-stage]').getBoundingClientRect(),m=r.querySelector('[data-algyr-media]').getBoundingClientRect(),details=r.querySelector('[data-algyr-details]').getBoundingClientRect();
+    return {top:stage.top,bottom:stage.bottom,detailsBottom:details.bottom,ratio:m.width/m.height,horizontal:document.documentElement.scrollWidth-document.documentElement.clientWidth};
    });
    details[profile.name]={...s,...rects};
    check(profile.name+'_pin_distance',Math.abs(s.end-s.start-profile.h*(profile.touch?3.5:4))<1);
    check(profile.name+'_header_clear',Math.abs(rects.top-s.pinOffset)<1);
-   check(profile.name+'_stage_fits',rects.bottom<=profile.h+1&&rects.actionsBottom<=profile.h+1);
+   check(profile.name+'_stage_fits',rects.bottom<=profile.h+1&&rects.detailsBottom<=profile.h+1);
    check(profile.name+'_frame_scrub',s.frame===50&&s.desiredFrame===50);
    check(profile.name+'_no_overflow',rects.horizontal<=0);
    check(profile.name+'_equal_ratio',Math.abs(rects.ratio-16/9)<.005);
@@ -88,8 +88,7 @@ async (page) => {
     await go(p,.8);await p.screenshot({path:'output/playwright/'+profile.name+'-screens-verified.png'});
     await p.locator('[data-algyr-step="2"]').click();await p.waitForTimeout(1200);
     check(profile.name+'_step_navigation',(await get(p)).scene==='lesson');
-    await p.locator('[data-algyr-skip]').click();
-    check(profile.name+'_skip_exits',await p.evaluate(()=>document.activeElement?.id==='platform-after'&&document.querySelector('#platform-after').getBoundingClientRect().top<innerHeight));
+    check(profile.name+'_no_action_buttons',await p.locator('.algyr-scroll-actions,[data-algyr-skip],[data-algyr-static]').count()===0);
     await go(p,.45);
     await p.setViewportSize({width:390,height:844});await ready(p);await p.waitForTimeout(400);
     check(profile.name+'_resize_mobile_one_pin',(await get(p)).mode==='mobile'&&await p.locator('.pin-spacer').count()===1&&(await get(p)).variant==='mobile');
@@ -99,10 +98,6 @@ async (page) => {
     await p.addStyleTag({content:'[data-algyr-scroll]{width:calc(100% - .4px)!important}'});
     await p.evaluate(()=>window.dispatchEvent(new Event('resize')));await p.waitForTimeout(400);
     check(profile.name+'_fractional_width',await p.evaluate(()=>{const r=document.querySelector('[data-algyr-scroll]');return document.documentElement.scrollWidth<=document.documentElement.clientWidth&&r.querySelector('.pin-spacer').getBoundingClientRect().width<=r.getBoundingClientRect().width+.02;}));
-    await p.locator('[data-algyr-static]').click();
-    check(profile.name+'_manual_static',(await get(p)).mode==='static'&&await p.locator('.pin-spacer').count()===0);
-    await p.locator('[data-algyr-static]').click();await ready(p);
-    check(profile.name+'_manual_animation_restore',await p.locator('.pin-spacer').count()===1);
     check(profile.name+'_no_cta',await p.locator('[data-algyr-cta]').count()===0);
    }
   }

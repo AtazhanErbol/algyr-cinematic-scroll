@@ -49,17 +49,17 @@ export function mount(root,dependencies={}){
  const stage=$('[data-algyr-stage]'),visual=$('[data-algyr-visual]'),canvas=$('[data-algyr-canvas]');
  const flat=$('[data-algyr-flat]'),shots=[...flat.children],details=$('[data-algyr-details]');
  const captions=all('[data-algyr-caption]'),dots=all('[data-algyr-step]');
- const gallery=$('[data-algyr-gallery]'),slides=all('[data-algyr-slide]'),toggle=$('[data-algyr-static]');
+ const gallery=$('[data-algyr-gallery]'),slides=all('[data-algyr-slide]');
  const header=config.headerSelector?document.querySelector(config.headerSelector):null;
  const reduce=matchMedia('(prefers-reduced-motion: reduce)'),events=new AbortController();
  const phases=config.phases;
  if(!phases||!(0<=phases.videoStart&&phases.videoStart<phases.videoEnd&&phases.videoEnd<phases.screensStart&&phases.screensStart<phases.screensEnd&&phases.screensEnd<=1))return null;
  let context,timeline,trigger,nearObserver,resizeObserver,preloadPromise;
- let ready=false,dead=false,failed=false,near=false,forceStatic=false,mode='',active=-2,raf=0,refreshTimer=0,pinOffset=0,steps=[];
+ let ready=false,dead=false,failed=false,near=false,mode='',active=-2,raf=0,refreshTimer=0,pinOffset=0,steps=[];
  const driver={frame:0,hold:0};
  const compact=()=>innerWidth<=Number(config.mobileBreakpoint)||matchMedia('(pointer: coarse)').matches;
  const animated=()=>mode==='desktop'||mode==='mobile';
- const eligible=()=>!reduce.matches&&!forceStatic;
+ const eligible=()=>!reduce.matches;
  let sequence,variant;
  function selectSequence(){
   const next=compact()&&config.mobileSequence?'mobile':'desktop';
@@ -84,14 +84,14 @@ export function mount(root,dependencies={}){
   pinOffset=config.pinTop==='auto'?(fixed?Math.ceil(header.getBoundingClientRect().height):0):Number(config.pinTop)||0;
   root.style.setProperty('--algyr-scroll-pin-top',pinOffset+'px');
   if(animated()){
-   const heading=$('.algyr-scroll-heading'),actions=$('.algyr-scroll-actions');
-   const css=getComputedStyle(stage),headCss=getComputedStyle(heading),actionCss=getComputedStyle(actions);
+   const heading=$('.algyr-scroll-heading');
+   const css=getComputedStyle(stage),headCss=getComputedStyle(heading);
    const available=stage.getBoundingClientRect().height-parseFloat(css.paddingTop)-parseFloat(css.paddingBottom)
     -heading.getBoundingClientRect().height-parseFloat(headCss.marginBottom)
-    -details.getBoundingClientRect().height-14-actions.getBoundingClientRect().height-parseFloat(actionCss.marginTop);
+    -details.getBoundingClientRect().height-14;
    const landscape=innerHeight<520&&innerWidth>innerHeight;
    const room=landscape?stage.getBoundingClientRect().height-parseFloat(css.paddingTop)-parseFloat(css.paddingBottom)
-    -heading.getBoundingClientRect().height-parseFloat(headCss.marginBottom)-actions.getBoundingClientRect().height-parseFloat(actionCss.marginTop):available;
+    -heading.getBoundingClientRect().height-parseFloat(headCss.marginBottom):available;
    root.style.setProperty('--algyr-scroll-media-width',Math.max(64,room)*16/9+'px');
   }
  };
@@ -149,7 +149,7 @@ export function mount(root,dependencies={}){
    onUpdate();
   },root);
   if(mode==='desktop')acquireSmoothing(root,config,gsap,ScrollTrigger,dependencies.lenis);
-  toggle.hidden=false;queueRefresh();
+  queueRefresh();
  }
  function clearDesktop(){
   releaseSmoothing(root);context?.revert();context=null;timeline=null;trigger=null;api.trigger=null;
@@ -161,11 +161,9 @@ export function mount(root,dependencies={}){
  function selectMode(){
   if(dead)return;
   selectSequence();
-  const next=forceStatic||reduce.matches?'static':failed||!sequence.context?'gallery':ready?(compact()?'mobile':'desktop'):'loading';
+  const next=reduce.matches?'static':failed||!sequence.context?'gallery':ready?(compact()?'mobile':'desktop'):'loading';
   if(next===mode)return;
-  clearDesktop();mode=next;root.dataset.mode=next;root.dataset.staticChoice=String(forceStatic);
-  toggle.hidden=reduce.matches||(!animated()&&!forceStatic);
-  toggle.setAttribute('aria-pressed',String(forceStatic));toggle.textContent=forceStatic?toggle.dataset.motionLabel:toggle.dataset.staticLabel;
+  clearDesktop();mode=next;root.dataset.mode=next;
   if(animated())buildDesktop();
   else {if(next!=='loading')sequence.stop();updateStep(next==='static'?slides.length-1:0);}
   measure();queueRefresh();
@@ -208,10 +206,6 @@ export function mount(root,dependencies={}){
   if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key)||mode==='static')return;
   event.preventDefault();navigate(event.key==='Home'?0:event.key==='End'?slides.length-1:clamp(active+(event.key==='ArrowRight'?1:-1),0,slides.length-1));
  },{signal:events.signal});
- toggle.addEventListener('click',()=>{forceStatic=!forceStatic;selectMode();preload();scrollToY(root.getBoundingClientRect().top+scrollY-pinOffset);},{signal:events.signal});
- $('[data-algyr-skip]').addEventListener('click',event=>{
-  event.preventDefault();const after=$('.algyr-scroll-after');scrollToY(after.getBoundingClientRect().top+scrollY-pinOffset);after.focus({preventScroll:true});
- },{signal:events.signal});
  window.addEventListener('resize',()=>{selectMode();preload();queueRefresh();},{passive:true,signal:events.signal});
  reduce.addEventListener('change',()=>{selectMode();preload();},{signal:events.signal});
  all('img').forEach(img=>img.addEventListener('load',queueRefresh,{signal:events.signal}));
@@ -223,8 +217,8 @@ export function mount(root,dependencies={}){
   destroy(){
    if(dead)return;dead=true;clearTimeout(refreshTimer);cancelAnimationFrame(raf);events.abort();
    nearObserver?.disconnect();resizeObserver?.disconnect();clearDesktop();sequence.destroy();
-   delete root.dataset.mode;delete root.dataset.pinned;delete root.dataset.staticChoice;
-   toggle.hidden=true;root.style.removeProperty('--algyr-scroll-width');instances.delete(root);roots.delete(root);
+   delete root.dataset.mode;delete root.dataset.pinned;
+   root.style.removeProperty('--algyr-scroll-width');instances.delete(root);roots.delete(root);
    if(!roots.size){removalObserver?.disconnect();removalObserver=null;}ScrollTrigger.refresh();
   },
  };

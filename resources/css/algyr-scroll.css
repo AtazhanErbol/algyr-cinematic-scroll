@@ -61,11 +61,6 @@
 .algyr-scroll-progress { height:2px; background:var(--algyr-scroll-rule); margin-bottom:24px; display:none; overflow:hidden; }
 .algyr-scroll[data-animated="true"] .algyr-scroll-progress { display:block; }
 .algyr-scroll-progress span { display:block; height:100%; background:var(--algyr-scroll-purple); transform:scaleX(0); transform-origin:left; }
-.algyr-scroll-actions { display:none; justify-content:center; gap:24px; align-items:center; width:100%; margin-top:22px; font-size:11px; color:var(--algyr-scroll-muted); }
-.algyr-scroll[data-animated="true"] .algyr-scroll-actions { display:flex; }
-.algyr-scroll[data-static-choice="true"] .algyr-scroll-actions { display:flex; }
-.algyr-scroll[data-static-choice="true"] .algyr-scroll-hint,.algyr-scroll[data-static-choice="true"] [data-algyr-skip] { display:none; }
-.algyr-scroll-actions button,.algyr-scroll-actions a { background:none; border:0; padding:6px 0; margin:0; font:inherit; color:inherit; text-decoration:none; cursor:pointer; }
 .algyr-scroll a:focus-visible,.algyr-scroll button:focus-visible,.algyr-scroll-gallery:focus-visible { outline:2px solid var(--algyr-scroll-purple); outline-offset:4px; }
 .algyr-scroll-gallery { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; gap:20px; margin:0; width:100%; scrollbar-width:none; -webkit-overflow-scrolling:touch; touch-action:pan-x pan-y; }
 .algyr-scroll-gallery::-webkit-scrollbar { display:none; }
@@ -120,9 +115,6 @@
 .algyr-scroll[data-mode="mobile"] .algyr-scroll-caption h3 {font-size:16px;}
 .algyr-scroll[data-mode="mobile"] .algyr-scroll-dots {justify-content:center;margin:0;}
 .algyr-scroll[data-mode="mobile"] .algyr-scroll-dots button {width:44px;height:44px;}
-.algyr-scroll[data-mode="mobile"] .algyr-scroll-actions {margin-top:8px;gap:16px;min-height:44px;}
-.algyr-scroll[data-mode="mobile"] .algyr-scroll-actions button,.algyr-scroll[data-mode="mobile"] .algyr-scroll-actions a {min-height:44px;display:flex;align-items:center;}
-.algyr-scroll[data-mode="mobile"] .algyr-scroll-hint {display:none;}
 @media(max-height:650px) and (orientation:portrait) {
  .algyr-scroll[data-mode="mobile"] .algyr-scroll-heading p {display:none;}
 }
@@ -137,5 +129,4 @@
  .algyr-scroll[data-animated="true"] .algyr-scroll-dots {display:grid;grid-template-columns:repeat(3,44px);justify-content:start;margin:0;}
  .algyr-scroll[data-animated="true"] .algyr-scroll-caption h3 {font-size:15px;}
  .algyr-scroll[data-animated="true"] .algyr-scroll-caption p {font-size:11px;line-height:16px;}
- .algyr-scroll[data-animated="true"] .algyr-scroll-actions {margin-top:4px;}
 }

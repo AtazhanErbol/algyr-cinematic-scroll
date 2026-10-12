@@ -2,7 +2,7 @@
 (() => {
  const ownScript=document.currentScript;
  if(window.AlgyrEmbed){window.AlgyrEmbed.init();return;}
- const base=new URL('./',ownScript.src),revision='20261012-9';
+ const base=new URL('./',ownScript.src),revision='20261012-10';
  const pending=new WeakSet(),templates=new Map();let assets,serial=0;
  const url=value=>new URL(value,base).href.replaceAll('%7Bindex%7D','{index}');
  const loadAssets=()=>assets??=new Promise((resolve,reject)=>{

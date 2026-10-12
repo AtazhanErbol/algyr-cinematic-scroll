@@ -4,8 +4,10 @@
 
 ```html
 <div data-algyr-embed data-lang="kk"></div>
-<script defer src="/algyr-block/embed.js?v=9"></script>
+<script defer src="/algyr-block/embed.js?v=10"></script>
 ```
+
+Готовая вёрстка без Laravel также находится в отдельной ветке [`html-standalone`](https://github.com/AtazhanErbol/algyr-cinematic-scroll/tree/html-standalone), прямо в корне.
 
 [Инструкция для обычного сайта / PHP / CMS](docs/HTML-INTEGRATION.md). Полная разметка без загрузчика: `standalone/snippet.kk.html` (также RU/EN). В репозитории сохранён и Laravel 12 + Blade + Vite вариант: `<x-algyr-scroll id="platform" />`.
 

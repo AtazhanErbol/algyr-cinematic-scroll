@@ -1,6 +1,6 @@
 {
   "engine": "webkit",
-  "passed": 100,
+  "passed": 96,
   "checks": {
     "safari-desktop_pin_distance": true,
     "safari-desktop_header_clear": true,
@@ -28,12 +28,10 @@
     "safari-desktop_ending_dead_zone": true,
     "safari-desktop_reverse_mask_pixels": true,
     "safari-desktop_step_navigation": true,
-    "safari-desktop_skip_exits": true,
+    "safari-desktop_no_action_buttons": true,
     "safari-desktop_resize_mobile_one_pin": true,
     "safari-desktop_resize_restores_one_pin": true,
     "safari-desktop_fractional_width": true,
-    "safari-desktop_manual_static": true,
-    "safari-desktop_manual_animation_restore": true,
     "safari-desktop_no_cta": true,
     "iphone_pin_distance": true,
     "iphone_header_clear": true,
@@ -61,12 +59,10 @@
     "iphone_ending_dead_zone": true,
     "iphone_reverse_mask_pixels": true,
     "iphone_step_navigation": true,
-    "iphone_skip_exits": true,
+    "iphone_no_action_buttons": true,
     "iphone_resize_mobile_one_pin": true,
     "iphone_resize_restores_one_pin": true,
     "iphone_fractional_width": true,
-    "iphone_manual_static": true,
-    "iphone_manual_animation_restore": true,
     "iphone_no_cta": true,
     "iphone-small_pin_distance": true,
     "iphone-small_header_clear": true,
@@ -141,8 +137,8 @@
       "ownedLenis": true,
       "top": 102,
       "bottom": 900,
-      "actionsBottom": 872.984375,
-      "ratio": 1.7778259853819711,
+      "detailsBottom": 872.984375,
+      "ratio": 1.7778279861424913,
       "horizontal": 0,
       "priority": [
         "f_000.webp",
@@ -196,7 +192,7 @@
       "ownedLenis": false,
       "top": 68,
       "bottom": 844,
-      "actionsBottom": 724.484375,
+      "detailsBottom": 698.484375,
       "ratio": 1.7777777777777777,
       "horizontal": 0,
       "priority": [
@@ -251,7 +247,7 @@
       "ownedLenis": false,
       "top": 68,
       "bottom": 667,
-      "actionsBottom": 631.765625,
+      "detailsBottom": 605.765625,
       "ratio": 1.7777777777777777,
       "horizontal": 0
     },
@@ -290,9 +286,10 @@
       "ownedLenis": false,
       "top": 68,
       "bottom": 390,
-      "actionsBottom": 381.984375,
-      "ratio": 1.7778397601283034,
+      "detailsBottom": 322.6875,
+      "ratio": 1.777867110779303,
       "horizontal": 0
     }
-  }
+  },
+  "revision": "20261012-10"
 }

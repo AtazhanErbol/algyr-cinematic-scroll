@@ -19,7 +19,7 @@ async page=>{
  check('unique_ids',await p.evaluate(()=>{const ids=[...document.querySelectorAll('[id]')].map(e=>e.id);return new Set(ids).size===ids.length;}));
  check('options_applied',await p.locator('#second-holder [data-algyr-scroll]').evaluate(r=>{const c=JSON.parse(r.dataset.algyrConfig),s=window.AlgyrScroll.getInstance(r).getState();return c.scrub===.6&&s.pinOffset===0&&Math.abs(s.end-s.start-innerHeight*3)<1;}));
  check('two_pins',await p.locator('.pin-spacer').count()===2);
- await p.evaluate(()=>{window.AlgyrEmbed.init();window.AlgyrEmbed.init();const s=document.createElement('script');s.src='../algyr-block/embed.js?v=9';document.body.append(s);});await p.waitForTimeout(300);
+ await p.evaluate(()=>{window.AlgyrEmbed.init();window.AlgyrEmbed.init();const s=document.createElement('script');s.src='../algyr-block/embed.js?v=10';document.body.append(s);});await p.waitForTimeout(300);
  check('duplicate_loader_safe',await p.locator('.pin-spacer').count()===2&&await p.locator('[data-algyr-scroll]').count()===2);
  await p.locator('#second-holder').evaluate(e=>e.remove());await p.waitForTimeout(300);
  check('removal_cleans_pin',await p.locator('.pin-spacer').count()===1);
