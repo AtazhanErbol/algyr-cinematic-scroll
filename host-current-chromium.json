@@ -1,0 +1,14 @@
+{
+  "results": {
+    "publicStylesheetStatus": 200,
+    "host_styles_pin_unclipped": true,
+    "header_resize_updates_pin": true,
+    "two_independent_instances": true,
+    "removed_instance_releases_pin": true,
+    "init_idempotent": true,
+    "destroy_restores_native_gallery": true,
+    "reuse_host_lenis": true,
+    "host_lenis_not_destroyed": true
+  },
+  "failures": []
+}
