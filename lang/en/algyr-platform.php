@@ -1,0 +1,28 @@
+<?php
+return [
+    'heading' => 'Everything on one',
+    'heading_accent' => 'platform',
+    'intro' => 'Watch lessons, complete assignments, take tests and track results in one place. All the tools you need are in your student dashboard.',
+    'student' => 'Learn at your own pace',
+    'student_description' => 'The first step towards your goal. Everything else is in your dashboard.',
+    'courses' => 'My courses',
+    'courses_description' => 'Choose a subject, open a lesson and keep learning at your own pace.',
+    'dashboard' => 'Your progress',
+    'dashboard_description' => 'Courses, available lessons and today\'s advice, all in one place.',
+    'lesson' => 'Every lesson is a step forward',
+    'lesson_description' => 'Video, test, workbook and results. A clear learning journey.',
+    'results' => 'See your results',
+    'results_description' => 'Review answers, learn from mistakes and track your progress.',
+    'test' => 'Practice UNT tests',
+    'test_description' => 'Choose two subjects and test your knowledge. Get results right away.',
+    'profile' => 'Your student dashboard',
+    'profile_description' => 'Your personal information and learning preferences, always at hand.',
+    'gallery' => 'Student dashboard screenshots. Swipe to browse.',
+    'steps' => 'Platform sections',
+    'open_image' => 'open full image',
+    'scroll' => 'Scroll to explore the platform',
+    'static' => 'View without motion',
+    'motion' => 'Enable animation',
+    'skip' => 'Skip',
+];
+

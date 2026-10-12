@@ -1,0 +1,144 @@
+[
+  {
+    "engine": "chromium",
+    "checks": {
+      "no_handoff_move_or_shrink": true,
+      "caption_below_image": true,
+      "exit_down_all_wheel_distance": true,
+      "exit_down_no_reverse_jump": true,
+      "exit_down_settles": true,
+      "enter_up_all_wheel_distance": true,
+      "enter_up_no_reverse_jump": true,
+      "enter_up_settles": true,
+      "after_block_native_scroll": true,
+      "no_horizontal_scroll": true,
+      "single_pin": true
+    },
+    "failures": [],
+    "detail": {
+      "geometry": [
+        {
+          "x": 303.828125,
+          "y": 262.3125,
+          "width": 832.328125,
+          "height": 468.171875
+        },
+        {
+          "x": 303.828125,
+          "y": 262.3125,
+          "width": 832.328125,
+          "height": 468.171875
+        },
+        {
+          "x": 303.828125,
+          "y": 262.3125,
+          "width": 832.328125,
+          "height": 468.171875
+        },
+        {
+          "x": 303.828125,
+          "y": 262.3125,
+          "width": 832.328125,
+          "height": 468.171875
+        },
+        {
+          "x": 303.828125,
+          "y": 262.3125,
+          "width": 832.328125,
+          "height": 468.171875
+        },
+        {
+          "x": 303.828125,
+          "y": 262.3125,
+          "width": 832.328125,
+          "height": 468.171875
+        },
+        {
+          "x": 303.828125,
+          "y": 262.3125,
+          "width": 832.328125,
+          "height": 468.171875
+        }
+      ],
+      "exit_down": {
+        "expected": 4696,
+        "actual": 4696
+      },
+      "enter_up": {
+        "expected": 2616,
+        "actual": 2616
+      }
+    }
+  },
+  {
+    "engine": "webkit",
+    "checks": {
+      "no_handoff_move_or_shrink": true,
+      "caption_below_image": true,
+      "exit_down_all_wheel_distance": true,
+      "exit_down_no_reverse_jump": true,
+      "exit_down_settles": true,
+      "enter_up_all_wheel_distance": true,
+      "enter_up_no_reverse_jump": true,
+      "enter_up_settles": true,
+      "after_block_native_scroll": true,
+      "no_horizontal_scroll": true,
+      "single_pin": true
+    },
+    "failures": [],
+    "detail": {
+      "geometry": [
+        {
+          "x": 303.828125,
+          "y": 262.3125,
+          "width": 832.328125,
+          "height": 468.171875
+        },
+        {
+          "x": 303.828125,
+          "y": 262.3125,
+          "width": 832.328125,
+          "height": 468.171875
+        },
+        {
+          "x": 303.828125,
+          "y": 262.3125,
+          "width": 832.328125,
+          "height": 468.171875
+        },
+        {
+          "x": 303.828125,
+          "y": 262.3125,
+          "width": 832.328125,
+          "height": 468.171875
+        },
+        {
+          "x": 303.828125,
+          "y": 262.3125,
+          "width": 832.328125,
+          "height": 468.171875
+        },
+        {
+          "x": 303.828125,
+          "y": 262.3125,
+          "width": 832.328125,
+          "height": 468.171875
+        },
+        {
+          "x": 303.828125,
+          "y": 262.3125,
+          "width": 832.328125,
+          "height": 468.171875
+        }
+      ],
+      "exit_down": {
+        "expected": 4696,
+        "actual": 4696
+      },
+      "enter_up": {
+        "expected": 2616,
+        "actual": 2616
+      }
+    }
+  }
+]

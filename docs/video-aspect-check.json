@@ -1,0 +1,101 @@
+{
+  "first_course_card": [
+    {
+      "frame": 108,
+      "x": 309,
+      "y": 251,
+      "width": 137,
+      "height": 31,
+      "aspect": 4.419
+    },
+    {
+      "frame": 109,
+      "x": 298,
+      "y": 248,
+      "width": 142,
+      "height": 33,
+      "aspect": 4.303
+    },
+    {
+      "frame": 110,
+      "x": 286,
+      "y": 247,
+      "width": 147,
+      "height": 33,
+      "aspect": 4.455
+    },
+    {
+      "frame": 111,
+      "x": 278,
+      "y": 244,
+      "width": 150,
+      "height": 35,
+      "aspect": 4.286
+    },
+    {
+      "frame": 112,
+      "x": 269,
+      "y": 243,
+      "width": 154,
+      "height": 35,
+      "aspect": 4.4
+    },
+    {
+      "frame": 113,
+      "x": 262,
+      "y": 241,
+      "width": 157,
+      "height": 36,
+      "aspect": 4.361
+    },
+    {
+      "frame": 114,
+      "x": 255,
+      "y": 239,
+      "width": 159,
+      "height": 37,
+      "aspect": 4.297
+    },
+    {
+      "frame": 115,
+      "x": 249,
+      "y": 238,
+      "width": 163,
+      "height": 37,
+      "aspect": 4.405
+    },
+    {
+      "frame": 116,
+      "x": 243,
+      "y": 238,
+      "width": 165,
+      "height": 37,
+      "aspect": 4.459
+    },
+    {
+      "frame": 117,
+      "x": 241,
+      "y": 237,
+      "width": 166,
+      "height": 37,
+      "aspect": 4.486
+    },
+    {
+      "frame": 118,
+      "x": 238,
+      "y": 235,
+      "width": 166,
+      "height": 38,
+      "aspect": 4.368
+    },
+    {
+      "frame": 119,
+      "x": 236,
+      "y": 236,
+      "width": 168,
+      "height": 39,
+      "aspect": 4.308
+    }
+  ],
+  "late_zoom_monotonic": true
+}

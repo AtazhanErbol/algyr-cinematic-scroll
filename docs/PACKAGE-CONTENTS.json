@@ -1,0 +1,1046 @@
+{
+  ".editorconfig": {
+    "bytes": 252,
+    "sha256": "f78cc5a2ef8ba61ad956d0f5db453748a981270f6a1b9f4a5a00df8690e7946d"
+  },
+  ".env.example": {
+    "bytes": 264,
+    "sha256": "546e89f85056f9c220aadfb75cbb81cf7fb2dbd13b89d4f45f613f8ec2a34ebb"
+  },
+  ".gitattributes": {
+    "bytes": 186,
+    "sha256": "a40eb27ee0b545ca5b5542daaf99fec51f84f23b3766a6353864ef2a115bc51c"
+  },
+  ".gitignore": {
+    "bytes": 283,
+    "sha256": "41e54abd62aa86fd5b731e0cd411c5bc7d4196a1f7aef363f434672da8fffa5d"
+  },
+  "app/Http/Controllers/Controller.php": {
+    "bytes": 77,
+    "sha256": "25d1c1ef8e6cc8a376553faacfba2b07d9dfaee9bdbb84f14f77517580e9deb1"
+  },
+  "app/Providers/AppServiceProvider.php": {
+    "bytes": 361,
+    "sha256": "caf306ef6a25a547bbb7edd5508a39b51c365083eb6dd58378cf2242018e94c7"
+  },
+  "artisan": {
+    "bytes": 425,
+    "sha256": "f91a517c0c5d3a904c3f390933964a5e08ec1fc68146882730daac4aca4ffcec"
+  },
+  "bootstrap/app.php": {
+    "bytes": 525,
+    "sha256": "02a8654e74028c7768574f80f9118d0a0464c7603e7c6304e077b032c1a92065"
+  },
+  "bootstrap/cache/.gitignore": {
+    "bytes": 14,
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+  },
+  "bootstrap/providers.php": {
+    "bytes": 89,
+    "sha256": "f720e185207a343d4c19fc99dbb317a4187efbcd7d38a303a695bbdd77ffb943"
+  },
+  "composer.json": {
+    "bytes": 932,
+    "sha256": "b5e4af30d5bdc89a8460e9f1e7335285cac6f287c570925836e98d042b1f822b"
+  },
+  "composer.lock": {
+    "bytes": 286219,
+    "sha256": "b113a95eea4aa780a5faf61728c0f9f6c8c325807a25a0e13d150c0850c261ed"
+  },
+  "config/algyr-scroll.php": {
+    "bytes": 753,
+    "sha256": "d82d56c0f469c13a47b7e4e3814fff38023859717e9db5d424181cd3eed1782a"
+  },
+  "config/app.php": {
+    "bytes": 4272,
+    "sha256": "78dcd36b226fd7b24057cb95f567cb6e96561c2406653892d8aef6dcea8461e4"
+  },
+  "config/auth.php": {
+    "bytes": 4040,
+    "sha256": "c7e204e9785c9f596d66fb884b493f658f2327f157646bdb4088efd6b3a7773f"
+  },
+  "config/cache.php": {
+    "bytes": 3683,
+    "sha256": "b8bcf382283330b94c0a602ff06452de819041ea709e28eea5065d51d1d7d085"
+  },
+  "config/database.php": {
+    "bytes": 6982,
+    "sha256": "06759b7b36b8641e9025fe03dd728970c4cb02d5b58ff709cbb0649987b4bfc2"
+  },
+  "config/filesystems.php": {
+    "bytes": 2532,
+    "sha256": "ba7060d7a23e490c3ce830656f6d24ad3ccf5b868e3293f2a12e411959dc5635"
+  },
+  "config/logging.php": {
+    "bytes": 4340,
+    "sha256": "299ec1ba5b5a803c8e20f666ae7628e442e856cc2ff7ac9e2adb17b97e8ad63b"
+  },
+  "config/mail.php": {
+    "bytes": 3631,
+    "sha256": "c43ff49a31c5f32ce21eb7159f2a4b3cd2f4074eaed5838d265646dbfedd3474"
+  },
+  "config/queue.php": {
+    "bytes": 4199,
+    "sha256": "6101774da7c8b79af46d0028f2b8b31a484c3f7eda10b76e5b27b6093ad364a4"
+  },
+  "config/services.php": {
+    "bytes": 1039,
+    "sha256": "8258c4487eb1d73a97e569eb0e411e3f25368044812df4cba807860432be1d92"
+  },
+  "config/session.php": {
+    "bytes": 7848,
+    "sha256": "f2e75e189021597e29940c0859c00c3088ec591e403768fff5143c5687a80f59"
+  },
+  "docs/ASSETS.md": {
+    "bytes": 6324,
+    "sha256": "51cbd6dfce1543999eab91c1d2a3c7bc12787403020b0391327cff265b293f3a"
+  },
+  "docs/browser-results.json": {
+    "bytes": 16693,
+    "sha256": "c265c99bb7e611c2b1b7f916628f3737a7889595746923d9f11f6d65fbadca13"
+  },
+  "docs/INTEGRATION.md": {
+    "bytes": 6353,
+    "sha256": "5554f76e26c8e07f91170293cb015650b98299249637e891332f1e50f3a8d811"
+  },
+  "docs/licenses/LENIS.txt": {
+    "bytes": 1096,
+    "sha256": "bba15b1137346a73ed8c35e7f20961a69e0ed842d956a50339240c3e7b08c089"
+  },
+  "docs/media-browser-results.json": {
+    "bytes": 4086,
+    "sha256": "3079940c0512ab888244629528b05ebb2404fb41c429c64c7efac55a3ccb2831"
+  },
+  "docs/MEDIA-REPORT.json": {
+    "bytes": 17099,
+    "sha256": "3581bfe20e64768fabc8e4b488db6d45cb2a427728917f8a9436412daa3e3f0f"
+  },
+  "docs/README-CUSTOMER.md": {
+    "bytes": 946,
+    "sha256": "d5ad6a277354c5333cc64ece8f7d8445587427446c4124d529b039a50e10e053"
+  },
+  "docs/review/android-video-verified.png": {
+    "bytes": 453225,
+    "sha256": "1a48e9ae986e76c7a88c2b14b20b4e65a32becbdf70ad869be890cd279e0b0af"
+  },
+  "docs/review/chromium-media-v8-119.png": {
+    "bytes": 202742,
+    "sha256": "f91f8da63afcec3a3dcd8f290d2b67546c79f203bccf0cc5082a5029d3e0121d"
+  },
+  "docs/review/chromium-media-v8-42.png": {
+    "bytes": 425583,
+    "sha256": "f41e2a5299a9e150911e61e0d933525c14d275bc28cdc5fb41f23f3219d8243e"
+  },
+  "docs/review/chromium-media-v8-50.png": {
+    "bytes": 429720,
+    "sha256": "f14f0d2f4bce5b03d70c4e7be8959fbd217e2b8c1f6e35688ad3d62f35c1b490"
+  },
+  "docs/review/chromium-stable-handoff.png": {
+    "bytes": 167095,
+    "sha256": "d2e0b696459df9cb8d5dac0fed3d0256de41ae35483c40683acc1390a4f10bca"
+  },
+  "docs/review/desktop-screens-verified.png": {
+    "bytes": 242399,
+    "sha256": "cd707dd36bd255013708cb4a1b0bcef9c137c9ffe03cdae687395f7fd2668706"
+  },
+  "docs/review/desktop-video-verified.png": {
+    "bytes": 428458,
+    "sha256": "e767b019c5b390f01c628df2ec3f9c8b5cd7ba061e5fe1209aaa83edb6c54f4e"
+  },
+  "docs/review/host-styles.png": {
+    "bytes": 420480,
+    "sha256": "e7814c5d57cd2a219ba0205ef09a40eb938ace68b4dc3ff0bf42129e0d602e87"
+  },
+  "docs/review/iphone-video-verified.png": {
+    "bytes": 425656,
+    "sha256": "ba147f8f8bac741a8d75b1595417e12cb02325ee49d63bd1f1669172d3cd4d6b"
+  },
+  "docs/review/webkit-media-v8-119.png": {
+    "bytes": 206476,
+    "sha256": "b662061c20b45aaf4f4f380a744e6ea840879af7ee9ac282c57669fc6ae568c7"
+  },
+  "docs/review/webkit-media-v8-42.png": {
+    "bytes": 449545,
+    "sha256": "28c2614bc0f943fd6babaa2d736902e692973d8f4876cae4568328574b213cef"
+  },
+  "docs/review/webkit-media-v8-50.png": {
+    "bytes": 455490,
+    "sha256": "dcef1d16113551967ecc1af4e2b5a50313a146d1477c252eff6a95e84e2d447c"
+  },
+  "docs/screen-composite-check.json": {
+    "bytes": 332,
+    "sha256": "e273268ce55dc0c0faf895e95cdd70e8739aaa5b18c23dc41981a6010aa04de0"
+  },
+  "docs/screen-tracking-check.json": {
+    "bytes": 30705,
+    "sha256": "5c03a701522caf798cc6ec51cc7ef70dacc1dbd5562d08b892d661cc2c26346e"
+  },
+  "docs/scroll-regressions.json": {
+    "bytes": 3423,
+    "sha256": "e7ce1653500bc2e7ac4667901b5afa873b9890d5489e8af447f3e04cbe3ca794"
+  },
+  "docs/STORYBOARD.md": {
+    "bytes": 2025,
+    "sha256": "1a8b51e9f030213c83edb14e60847f61b45d954ae0ee246276a5d721b831ce8c"
+  },
+  "docs/THIRD-PARTY-NOTICES.md": {
+    "bytes": 2070,
+    "sha256": "c78d03c1c41ae8307afc4e2d96d9f2690c5b25c2397218a50400ada010bd51c9"
+  },
+  "docs/VALIDATION.md": {
+    "bytes": 8437,
+    "sha256": "6f123721f7fd146d40d1189e0380a7de681f39c8ca74a7a1d1cfaa302588019a"
+  },
+  "docs/video-aspect-check.json": {
+    "bytes": 1684,
+    "sha256": "06a2f8daeca2d8d8b5aa3bad356a4da3a5ed7afc3ce7ad7e81125a4f93df7f67"
+  },
+  "lang/en/algyr-platform.php": {
+    "bytes": 1526,
+    "sha256": "895ac92974c580d627d7684289cd9f7524ee3d2d7057cab40ddef99854a5a245"
+  },
+  "lang/kk/algyr-platform.php": {
+    "bytes": 2193,
+    "sha256": "cd0760e26b7b23aa00c288410b6473c4c01b5eb187d695f9d3f34b79010406a5"
+  },
+  "lang/ru/algyr-platform.php": {
+    "bytes": 2219,
+    "sha256": "b154057d59f2a706ef834e2de6c059fea70a33a693ec6e1b3f7becca62234661"
+  },
+  "media-source/camera-enhanced-1080.mp4": {
+    "bytes": 10163807,
+    "sha256": "f9d4ed2fb52ea96db861c2a2605c7f319a2499d0e597b68f39640a6c66f08358"
+  },
+  "media-source/camera-original.mp4": {
+    "bytes": 4337708,
+    "sha256": "880b9cd3289a56af860b7b49c721db0d1be2fc5031ff882521ff029bb8cd5858"
+  },
+  "media-source/camera-prepared.mp4": {
+    "bytes": 4370605,
+    "sha256": "65a9abff2a3565f80e07fa35ed8210a5a56135b256ef711ddef8bc063be8034b"
+  },
+  "media-source/courses.png": {
+    "bytes": 354345,
+    "sha256": "27b84b99eeda746374c62ab99785765de2f905139b5d7dfd5a05b39b2b5a40ed"
+  },
+  "media-source/dashboard.png": {
+    "bytes": 159557,
+    "sha256": "159854a79eb2fe3562c1d967876c2af1e43711641acf3c073e0a48206b9a42f3"
+  },
+  "media-source/lesson.png": {
+    "bytes": 468976,
+    "sha256": "b62cc6b29f6250f0ea2932bd585448eb5f11107a946b3771968f80966b6e9a43"
+  },
+  "media-source/profile.png": {
+    "bytes": 75268,
+    "sha256": "492f6719c2a105412efaa9fc09b847dd93f3e26cd5c7d3cddd96c0a7840c4c54"
+  },
+  "media-source/results.png": {
+    "bytes": 108505,
+    "sha256": "2a7c29cd3e63da65bf0322c4bcb9ece5d105acd43e5dc22f91ae83a1512592f7"
+  },
+  "media-source/screen-tracking.json": {
+    "bytes": 32346,
+    "sha256": "5faacc21ea67d351478b387d3d384f64c1ac41b8f7d3807c228ebb241e053883"
+  },
+  "media-source/test.png": {
+    "bytes": 147451,
+    "sha256": "b18c1c332168f327f03ca9973567ba676e2942aac1928eb961f3ebdee54c4948"
+  },
+  "package-lock.json": {
+    "bytes": 39474,
+    "sha256": "bf1c8480ca1c453fc91968942f481b0651a4e70a669bf5eb7a89fede7fef6daf"
+  },
+  "package.json": {
+    "bytes": 382,
+    "sha256": "6a74682e84716ed486fc68ad6599caf1f9a6e5af84e53472968307b536b52597"
+  },
+  "phpunit.xml": {
+    "bytes": 1223,
+    "sha256": "620ac66f44586c4a9a18cd49f495d336b23fb1fc90b1be7e86bbedd50def30b7"
+  },
+  "preview/index.html": {
+    "bytes": 16778,
+    "sha256": "a78ae60848b6430575a2beb833d8dbe97507ce3eac693c042ea27e11b980d84a"
+  },
+  "public/.htaccess": {
+    "bytes": 740,
+    "sha256": "b7e379c77639fd56144947dbae84c84eb466d9c686ea81f2f013ae85421da923"
+  },
+  "public/build/assets/algyr-scroll-entry-Bs0eay1_.js": {
+    "bytes": 146600,
+    "sha256": "603fe1e088d494e6ad8ba8729a401354951b9b4a7dd91727c75c43814d217369"
+  },
+  "public/build/assets/algyr-scroll-entry-zmuhYSm7.css": {
+    "bytes": 9753,
+    "sha256": "38c562e98fe75f29cc69e460e36875a8ed9c9d068e96e7e77ce9b1542de2eeb4"
+  },
+  "public/build/assets/demo-B71XEWAc.js": {
+    "bytes": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  "public/build/assets/demo-sSrOg4r8.css": {
+    "bytes": 2601,
+    "sha256": "8eb684c318a9a08c25f5c0410973811a3075ffcb1772a0310b41eddad6d28fc6"
+  },
+  "public/build/assets/gotham-bold-5XChUxNd.woff2": {
+    "bytes": 24864,
+    "sha256": "7cee274a95c56e8b95ed306a893494814c33c55ed40d4ca3977b6d6712c83921"
+  },
+  "public/build/assets/gotham-medium-CTRdVB-J.woff2": {
+    "bytes": 26004,
+    "sha256": "9c50a061f73b9c068a42208ca7200672f00e6d82d428c56d068aa92a36bf6888"
+  },
+  "public/build/assets/gotham-regular-C6a2Cg7N.woff2": {
+    "bytes": 26252,
+    "sha256": "976d201aad1209ba1925b6f423db1c88825bce19c0ff25cec4f29063314a78cb"
+  },
+  "public/build/assets/inter-bold-B0RMAd2-.woff2": {
+    "bytes": 111232,
+    "sha256": "333845160356ccd2cf62c41006b853e89904bb512686098916bb69ec0f878eac"
+  },
+  "public/build/manifest.json": {
+    "bytes": 1250,
+    "sha256": "8695ac8f740773766391c17585d9cca7ac5ced0544a2051793d2c84f727d41a1"
+  },
+  "public/favicon.ico": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "public/favicon.svg": {
+    "bytes": 249,
+    "sha256": "1eac83fb255efa81cc5e438fc4ee290b2098e70b7d5a93214d2ae08d11a10d6c"
+  },
+  "public/index.php": {
+    "bytes": 543,
+    "sha256": "eba77cba39695b6bd091fe5211d481f7ebb2ce2d8d26230b5a609465d0a4aff9"
+  },
+  "public/media/algyr/brand/logo.svg": {
+    "bytes": 8222,
+    "sha256": "b71656a41b312ca886254b609e288002e5099b5043c2771f6f11469281d0abf5"
+  },
+  "public/media/algyr/brand/platform-bg.png": {
+    "bytes": 107320,
+    "sha256": "e0f8b1d3be5d128e950defa14aacef8eacc953fa8c200f16d05a1d0c09ddb860"
+  },
+  "public/media/algyr/platform/frames/f_000.webp": {
+    "bytes": 52618,
+    "sha256": "400e98aafe64d9776f1ea1bb9d81c5e1c194d6e842c582ab052aeda57a70cf68"
+  },
+  "public/media/algyr/platform/frames/f_001.webp": {
+    "bytes": 52314,
+    "sha256": "505b038502a5828bf777c71f20832d84cfe52cab2463dd516f92447957761c11"
+  },
+  "public/media/algyr/platform/frames/f_002.webp": {
+    "bytes": 52360,
+    "sha256": "882355a9e52eabe6fa956c603290afcd74b2b1f81a88b93c6164cfdf156f14e2"
+  },
+  "public/media/algyr/platform/frames/f_003.webp": {
+    "bytes": 51636,
+    "sha256": "abfa82e280663d2b5ce17549bc3de4fc168d2c239799844435cc610e592ef8cf"
+  },
+  "public/media/algyr/platform/frames/f_004.webp": {
+    "bytes": 51784,
+    "sha256": "b9da096b63f904a630737a7f3e1fc48a1661eea0f1aac3cbe4b1801ee225686a"
+  },
+  "public/media/algyr/platform/frames/f_005.webp": {
+    "bytes": 51120,
+    "sha256": "0aba38470d2a5adb80a55e755951fc6800a57bf50b3a0e28f2d0ab5465c7f621"
+  },
+  "public/media/algyr/platform/frames/f_006.webp": {
+    "bytes": 51242,
+    "sha256": "dc298d27cbcb5bb4947d118b0f7df3bd253a82b7eebff19fa1f3e8ce8f17c7f9"
+  },
+  "public/media/algyr/platform/frames/f_007.webp": {
+    "bytes": 50080,
+    "sha256": "7fa914eb98c95bcb2f35017256a2d4c3a0f086ac9a31bd6d90ac1905c98a5bf7"
+  },
+  "public/media/algyr/platform/frames/f_008.webp": {
+    "bytes": 51658,
+    "sha256": "cde0154ab3414795be9bbc803f40dbb73aeaae8115827043243fcf56cd94999e"
+  },
+  "public/media/algyr/platform/frames/f_009.webp": {
+    "bytes": 50054,
+    "sha256": "b4d0683ae529623b4d20d0181f2bcaf48af11f619493770b3c87e6099c8723fe"
+  },
+  "public/media/algyr/platform/frames/f_010.webp": {
+    "bytes": 51510,
+    "sha256": "30962cf4288a11b02f92db19f23db6c4776c43e7409fe61679d839f2bc41fed1"
+  },
+  "public/media/algyr/platform/frames/f_011.webp": {
+    "bytes": 49084,
+    "sha256": "672f5f438ce157a315cb20727afdcde846bff3e75e7c4ac1a9ac24bf6d9036c0"
+  },
+  "public/media/algyr/platform/frames/f_012.webp": {
+    "bytes": 50650,
+    "sha256": "d5923bcbd9f4275124f983a645b774407d421c05e72fbea360cba594fb477cf6"
+  },
+  "public/media/algyr/platform/frames/f_013.webp": {
+    "bytes": 47818,
+    "sha256": "12899f758999daabc256474d51d3be58d326fc8037ab074a3b74c384bcd5f5af"
+  },
+  "public/media/algyr/platform/frames/f_014.webp": {
+    "bytes": 48736,
+    "sha256": "3486f3a927696e2d2150e28124994d6208924ee49e7139485c8a134a598597e5"
+  },
+  "public/media/algyr/platform/frames/f_015.webp": {
+    "bytes": 48338,
+    "sha256": "d475fa0bfcd783cb8a72e6f3635806a5ef2ace48c299e34e58c4a55257ef0c91"
+  },
+  "public/media/algyr/platform/frames/f_016.webp": {
+    "bytes": 47910,
+    "sha256": "13aec865ff39d23b2c5edf2fd2030370eaea5bf4551f02440a4897ba8d818186"
+  },
+  "public/media/algyr/platform/frames/f_017.webp": {
+    "bytes": 46700,
+    "sha256": "1658f02f5bb9f6acfeb2ebe3021f5a1e13e36938223ff86fcd1170e884bc85b1"
+  },
+  "public/media/algyr/platform/frames/f_018.webp": {
+    "bytes": 46522,
+    "sha256": "f2d24c91d4065c24de9e352d3adadc83222d6bca2973e5166813ce8e97286ce2"
+  },
+  "public/media/algyr/platform/frames/f_019.webp": {
+    "bytes": 44014,
+    "sha256": "2d20eaab5e739031ab47145e5c7bdbf225eef4b43fad1ae5a2b9b6916dc563de"
+  },
+  "public/media/algyr/platform/frames/f_020.webp": {
+    "bytes": 44442,
+    "sha256": "f4c632b938ec4a1687cf4212d8c30419e3ad56357d14a0cc169ca3730e4bbdcb"
+  },
+  "public/media/algyr/platform/frames/f_021.webp": {
+    "bytes": 42924,
+    "sha256": "b690a6ead82d2754eded74f2af053924ea86f5ffd64b36077e61f3867c58c0e6"
+  },
+  "public/media/algyr/platform/frames/f_022.webp": {
+    "bytes": 43558,
+    "sha256": "6f291373b1804a08cbb18e6063d8fdbbfe39188bc2c6030e7c4c1b20aa57bf21"
+  },
+  "public/media/algyr/platform/frames/f_023.webp": {
+    "bytes": 41204,
+    "sha256": "a908a206359310b207d55a1e7f273afc4390aa28cd840199e5177a347bf3d0e2"
+  },
+  "public/media/algyr/platform/frames/f_024.webp": {
+    "bytes": 41654,
+    "sha256": "817fec34bebb49e9d90ea54b42f4cf2d532b654028ab946137fad65378506739"
+  },
+  "public/media/algyr/platform/frames/f_025.webp": {
+    "bytes": 39616,
+    "sha256": "27263a14a4970b134565d8c53afb116ec21dc3a6d3ef6586175de56e44731eb0"
+  },
+  "public/media/algyr/platform/frames/f_026.webp": {
+    "bytes": 41362,
+    "sha256": "813760d3b77e01a1a800f96b4503a1fd50a01276bafb3ab882f56b2254336717"
+  },
+  "public/media/algyr/platform/frames/f_027.webp": {
+    "bytes": 39314,
+    "sha256": "3e1a184644e25d0df78ff741de6bbd6798597ee87645bcf11912f2d6807a9aac"
+  },
+  "public/media/algyr/platform/frames/f_028.webp": {
+    "bytes": 38982,
+    "sha256": "61bd35252bca77b23db1706a513641bf621c10e05398195cae7194b02fc517d3"
+  },
+  "public/media/algyr/platform/frames/f_029.webp": {
+    "bytes": 39254,
+    "sha256": "d809c73cbc9b478ea6e6b67761f0f2987e255d670b6f06a6c40b63f9f59e67a3"
+  },
+  "public/media/algyr/platform/frames/f_030.webp": {
+    "bytes": 38842,
+    "sha256": "a14e7b9bf06d95884c834a775fb57dd82fa04575f0a68b07134a9127b97ee8a4"
+  },
+  "public/media/algyr/platform/frames/f_031.webp": {
+    "bytes": 38094,
+    "sha256": "7d63bff5b0f9514e598fdb63603a702e5fab5c3c8f772875c53b90e72742c9ce"
+  },
+  "public/media/algyr/platform/frames/f_032.webp": {
+    "bytes": 38102,
+    "sha256": "98bc69f352db5a444354eee9f6d0f7fe3790c4c4cdf887fc2c6f7258becd3f9a"
+  },
+  "public/media/algyr/platform/frames/f_033.webp": {
+    "bytes": 38892,
+    "sha256": "3e84fb7541f7621619b034ffdc6459db3dc58ceca64ca6feddd34597a4dc712e"
+  },
+  "public/media/algyr/platform/frames/f_034.webp": {
+    "bytes": 40086,
+    "sha256": "157fe556fbd85b119d69b99cfe795d0b7e251374d08aca001a26a2401e7051c9"
+  },
+  "public/media/algyr/platform/frames/f_035.webp": {
+    "bytes": 39770,
+    "sha256": "57add209cd881e6584171f559b9a8e461d03c076602228b2bcaad2f0d8868a65"
+  },
+  "public/media/algyr/platform/frames/f_036.webp": {
+    "bytes": 41268,
+    "sha256": "d177f3f82b40cd751748e3ded3053080a7cf85682e1f425a13a74f7afe64ab62"
+  },
+  "public/media/algyr/platform/frames/f_037.webp": {
+    "bytes": 41026,
+    "sha256": "137686fe2d2149255ab98f3531715c233c9dd0b60e7a3215692a433b90a4f8b1"
+  },
+  "public/media/algyr/platform/frames/f_038.webp": {
+    "bytes": 40566,
+    "sha256": "ce3d6393803b7e00aa92bfc4b37d33da192261aaf4af77d28e35fb0c7e41fb78"
+  },
+  "public/media/algyr/platform/frames/f_039.webp": {
+    "bytes": 40826,
+    "sha256": "4ca082fa860b9341d9778f79887cec8f7e36fffe49e25098373c84baed09e8b3"
+  },
+  "public/media/algyr/platform/frames/f_040.webp": {
+    "bytes": 40670,
+    "sha256": "4b902e6b79a8cb32cb82f3a93e3f1ef325cdda4a68b2a9858b88c77370f7edf9"
+  },
+  "public/media/algyr/platform/frames/f_041.webp": {
+    "bytes": 40146,
+    "sha256": "2ddd2cf7f61a4eb2ed6356a16ccef58b4dbca230d9c5b8c5e3026b1543da449f"
+  },
+  "public/media/algyr/platform/frames/f_042.webp": {
+    "bytes": 39290,
+    "sha256": "ac5727a106ff3181c411d3b8e2bce11ae1539765616e309e52bb883b5bc49f5d"
+  },
+  "public/media/algyr/platform/frames/f_043.webp": {
+    "bytes": 38706,
+    "sha256": "32d460ff7b0075907c0e21518ba561a588b20b6e7a4a2c244e3f69b31fc73043"
+  },
+  "public/media/algyr/platform/frames/f_044.webp": {
+    "bytes": 37960,
+    "sha256": "d2f120d2aa833da29ac8fafb5e80ceab06f2a7fa92b2ea2b055bf648cb7a6f74"
+  },
+  "public/media/algyr/platform/frames/f_045.webp": {
+    "bytes": 37842,
+    "sha256": "b53359ca480ae954c71979d4bb6da650dc42686fd031dc691b01c8719c4c6f1d"
+  },
+  "public/media/algyr/platform/frames/f_046.webp": {
+    "bytes": 38756,
+    "sha256": "196110f26680766080ccab18ac1fb4bb0645acccd145b104e8a877381616efbb"
+  },
+  "public/media/algyr/platform/frames/f_047.webp": {
+    "bytes": 38670,
+    "sha256": "6e4cd808b7e0d0c8a98b4951ed6af5d30555ef269aa86beb7c478275173ad735"
+  },
+  "public/media/algyr/platform/frames/f_048.webp": {
+    "bytes": 40388,
+    "sha256": "2c03460e6b4a7950d732f312fc41b249a5e2c2d316cc6c8828ebc6c372c7fd92"
+  },
+  "public/media/algyr/platform/frames/f_049.webp": {
+    "bytes": 40948,
+    "sha256": "de33606918dbc15fa1f0b34dbf82032c65af2c6717a1274e2d2f5f01b162df5c"
+  },
+  "public/media/algyr/platform/frames/f_050.webp": {
+    "bytes": 43484,
+    "sha256": "29632c20d4d6678876ad0136f8e0aa36563087e1974c97901a8b175807fdd883"
+  },
+  "public/media/algyr/platform/frames/f_051.webp": {
+    "bytes": 42866,
+    "sha256": "0ff14fbcd63026d402fc3e0f6db7023839cc5535574d3876903b752ea9404289"
+  },
+  "public/media/algyr/platform/frames/f_052.webp": {
+    "bytes": 44574,
+    "sha256": "278ded6eb82c4d021511436e61b25e1c8f76fdbbd25c1b8a677fe95ddfa7aa17"
+  },
+  "public/media/algyr/platform/frames/f_053.webp": {
+    "bytes": 43652,
+    "sha256": "642b7277b9df2a9e46d2b4a0b46f7c472b7d6afdb5f7f94453b185732b37ae09"
+  },
+  "public/media/algyr/platform/frames/f_054.webp": {
+    "bytes": 43084,
+    "sha256": "fa22e88701c15e3c96d95b7142784a82b269bb63dad2eb949a96f221661841b1"
+  },
+  "public/media/algyr/platform/frames/f_055.webp": {
+    "bytes": 41940,
+    "sha256": "96015964931d52bbc6d263c61835c96fa84bc3c317ce9e983dcbf9347a1c4cf2"
+  },
+  "public/media/algyr/platform/frames/f_056.webp": {
+    "bytes": 42742,
+    "sha256": "0248659682ee0e871262936ca04faad8886f6ac9d2d87012fdd0257c14cb7ff1"
+  },
+  "public/media/algyr/platform/frames/f_057.webp": {
+    "bytes": 42322,
+    "sha256": "cfb541ecef769bbc2f52d5206bf5d458af771295a61133e3458a66dfba47f31d"
+  },
+  "public/media/algyr/platform/frames/f_058.webp": {
+    "bytes": 42866,
+    "sha256": "c7ab5863660c1a672f1a2e0671542108ed32c6ee13b8c55c3de36fe214abfb8e"
+  },
+  "public/media/algyr/platform/frames/f_059.webp": {
+    "bytes": 41604,
+    "sha256": "dd7a640c3ca34bdb5c7f594fb4f349ba761e34559d2e756f5d1794820fbc4a96"
+  },
+  "public/media/algyr/platform/frames/f_060.webp": {
+    "bytes": 43302,
+    "sha256": "9afbc7b456c9f86a4424e3b131826856fac622a8590b0c585f80a6cc8ba757ad"
+  },
+  "public/media/algyr/platform/frames/f_061.webp": {
+    "bytes": 42288,
+    "sha256": "3e861b327f935e84833f4a2c307f98da5bf734259b0e64c2ed9870c15a14ed47"
+  },
+  "public/media/algyr/platform/frames/f_062.webp": {
+    "bytes": 42450,
+    "sha256": "18d78972658d2923e93f1c498f18d91d171c81442c208029b1bdb66f4baaed07"
+  },
+  "public/media/algyr/platform/frames/f_063.webp": {
+    "bytes": 41582,
+    "sha256": "8355ba395edadfacf59e777afc4ff5567881092f6da17e8418e881a70bb069d0"
+  },
+  "public/media/algyr/platform/frames/f_064.webp": {
+    "bytes": 43126,
+    "sha256": "df189fd8f8ce46b56e70a998b7f033fd25756da177761d68cf264e9982543f95"
+  },
+  "public/media/algyr/platform/frames/f_065.webp": {
+    "bytes": 42666,
+    "sha256": "424e60ad304abc12a9d91a79a22475fbc0210d937c18a76bd5bc7c4dad1bb6fd"
+  },
+  "public/media/algyr/platform/frames/f_066.webp": {
+    "bytes": 42288,
+    "sha256": "afa3f9788cbcbbed01a7ab6ff2e9d05d1fa6f48dd72d7a030391a1e7cdc75ec9"
+  },
+  "public/media/algyr/platform/frames/f_067.webp": {
+    "bytes": 41580,
+    "sha256": "a787d8ddf1c2dac2cde371baa20095c389fc59508a5ccdd9c4ff2984730d4176"
+  },
+  "public/media/algyr/platform/frames/f_068.webp": {
+    "bytes": 41830,
+    "sha256": "8b606f01ebc60ebf8dba1708c58916115b3455a57ac2e49c948909c06b779e49"
+  },
+  "public/media/algyr/platform/frames/f_069.webp": {
+    "bytes": 40860,
+    "sha256": "47f14d4b65fde39e69a70e085a2d3bcb534fcf7feb39cc2b93ac15b240211355"
+  },
+  "public/media/algyr/platform/frames/f_070.webp": {
+    "bytes": 40996,
+    "sha256": "3bda9c17ce5a07b87c600abbbb0cef4686f385804bb2c8f4a04f8bed8d645897"
+  },
+  "public/media/algyr/platform/frames/f_071.webp": {
+    "bytes": 39844,
+    "sha256": "d749cb029ca1116fc2af731df3032c41f46473ecec109a41662146e2ca89469e"
+  },
+  "public/media/algyr/platform/frames/f_072.webp": {
+    "bytes": 39184,
+    "sha256": "f17cd78fe7191143096fceb16f03474d90a22acb0d34b539baf38e9ab70ad7e4"
+  },
+  "public/media/algyr/platform/frames/f_073.webp": {
+    "bytes": 37510,
+    "sha256": "34da25e5d662535e5dde96a40eb958c7583dbe81324d777b4194989822795bcc"
+  },
+  "public/media/algyr/platform/frames/f_074.webp": {
+    "bytes": 36620,
+    "sha256": "feba378ff59915d268f30227345ffc304123e1a65074619237655f91a1182cee"
+  },
+  "public/media/algyr/platform/frames/f_075.webp": {
+    "bytes": 35018,
+    "sha256": "11cbaae8e13e146e6a16ea59380537f25620808bc2db7980e738a1797bf1ff6a"
+  },
+  "public/media/algyr/platform/frames/f_076.webp": {
+    "bytes": 35276,
+    "sha256": "382429990a55d4f97b398d8883bd16b401e55260657ae9b2b18b37f58b355aff"
+  },
+  "public/media/algyr/platform/frames/f_077.webp": {
+    "bytes": 33462,
+    "sha256": "c60dabfeff0992578495859933a28bbf938aacddaf4d84fd41e4a8a4c74ded20"
+  },
+  "public/media/algyr/platform/frames/f_078.webp": {
+    "bytes": 34174,
+    "sha256": "d6b321eb0931eb9a0c2074bdb269671ab18e82afbab20e7e3e990b802f5a159c"
+  },
+  "public/media/algyr/platform/frames/f_079.webp": {
+    "bytes": 32210,
+    "sha256": "9a6e3a1e285c33d714e787b761d7123c40c2b3d62781a7ac533138cfbecc5a63"
+  },
+  "public/media/algyr/platform/frames/f_080.webp": {
+    "bytes": 32772,
+    "sha256": "d1dcf515aba7a9cc23621693feb565f59b12b73b360207b4db6c6d70a53e1266"
+  },
+  "public/media/algyr/platform/frames/f_081.webp": {
+    "bytes": 33316,
+    "sha256": "fe536aa3e588401d35b8e39ea5f6c9d900fa589134e715c81a937083591b0cc9"
+  },
+  "public/media/algyr/platform/frames/f_082.webp": {
+    "bytes": 34184,
+    "sha256": "d315833c74c74a42dfcee9e73298c4a5b2cdb128604e839ba2d60e1e1d544ec2"
+  },
+  "public/media/algyr/platform/frames/f_083.webp": {
+    "bytes": 33328,
+    "sha256": "519057883476726e1fa54318ec8a6efb388a349fff975cda0640340cef7da767"
+  },
+  "public/media/algyr/platform/frames/f_084.webp": {
+    "bytes": 33266,
+    "sha256": "c3fb4f8cc92cee5fb2b99b5c7334640b3db0b130925894010facfed1ee6e7cde"
+  },
+  "public/media/algyr/platform/frames/f_085.webp": {
+    "bytes": 33480,
+    "sha256": "520fd4312ec291a1d2ea6e08641fd1859aeffa4e95c7555bfff40c1bb32243f1"
+  },
+  "public/media/algyr/platform/frames/f_086.webp": {
+    "bytes": 34744,
+    "sha256": "c204c51ab03c141e464c9db89aecd378fcd75d915be4202e454f1b03557b475c"
+  },
+  "public/media/algyr/platform/frames/f_087.webp": {
+    "bytes": 33988,
+    "sha256": "88829793f4118b657b1e48474613bde8c63ae1d8511a3d05881a4058fbdb05bf"
+  },
+  "public/media/algyr/platform/frames/f_088.webp": {
+    "bytes": 34930,
+    "sha256": "487976bede0c5991e65c83efe5112096e080507627e3cebd6573282b8a3a2231"
+  },
+  "public/media/algyr/platform/frames/f_089.webp": {
+    "bytes": 34804,
+    "sha256": "a22d51ddd8b345615d484093073ae7ba202715f1ff8f2bd05ca85777ed0d1f63"
+  },
+  "public/media/algyr/platform/frames/f_090.webp": {
+    "bytes": 35176,
+    "sha256": "033b1fd67d57b8ef01e09c09880121bc58a12a452503cf114b31241c81db5d76"
+  },
+  "public/media/algyr/platform/frames/f_091.webp": {
+    "bytes": 34992,
+    "sha256": "db25fbbd46c51c96f84073ff72deac931ddc30e185160761fceff782cddbcf20"
+  },
+  "public/media/algyr/platform/frames/f_092.webp": {
+    "bytes": 35064,
+    "sha256": "0f651f7598469fbf7ba8fc82af0797f31a2b62906e291d4ccf7bb0786d54eae2"
+  },
+  "public/media/algyr/platform/frames/f_093.webp": {
+    "bytes": 34846,
+    "sha256": "48977e29cd4bf57631bda2278272940fc39b2acc14c2e01ca5582a75bd686e56"
+  },
+  "public/media/algyr/platform/frames/f_094.webp": {
+    "bytes": 35040,
+    "sha256": "cfa37e5861f5ced0f0df43c26693d6163b001127ab94487caef2844f0de03470"
+  },
+  "public/media/algyr/platform/frames/f_095.webp": {
+    "bytes": 34954,
+    "sha256": "1564565246e383763238f316e1ede84a24c6125f0991ccebb836e4de44f26ec0"
+  },
+  "public/media/algyr/platform/frames/f_096.webp": {
+    "bytes": 35472,
+    "sha256": "094803b9272e9b05fe24c1d9e52b5ea48d8341dc0c267b0342b8d4ac65b33243"
+  },
+  "public/media/algyr/platform/frames/f_097.webp": {
+    "bytes": 35302,
+    "sha256": "2662ae83962cf621547a299fbd71e26d6ec78fac2b148c3e082f9a2b01fe8bff"
+  },
+  "public/media/algyr/platform/frames/f_098.webp": {
+    "bytes": 35394,
+    "sha256": "620a9b5e49248dc634075418b003562ca38947e99ac850278c8114df28c1d4b8"
+  },
+  "public/media/algyr/platform/frames/f_099.webp": {
+    "bytes": 36222,
+    "sha256": "8ca3c955efcf5ba890593230651830483de33b0ce25306973c37672dc651cc5e"
+  },
+  "public/media/algyr/platform/frames/f_100.webp": {
+    "bytes": 35458,
+    "sha256": "f0d63fd199953081d04ddb277ff082f6b67987402354341f63138be2946ba17e"
+  },
+  "public/media/algyr/platform/frames/f_101.webp": {
+    "bytes": 36418,
+    "sha256": "daca04da3b2dd7f3a7f03a2bfea9a54d85439b25ae5c974414488c698e9204db"
+  },
+  "public/media/algyr/platform/frames/f_102.webp": {
+    "bytes": 35132,
+    "sha256": "34c6a69fb7088c88f52c8a0e9dd787b4bf758c0478e5ae7f7be287145923980c"
+  },
+  "public/media/algyr/platform/frames/f_103.webp": {
+    "bytes": 34082,
+    "sha256": "1162df8e8c24b79b0d500b2162cf8ce5916de5791d7f046344a1f915d451296d"
+  },
+  "public/media/algyr/platform/frames/f_104.webp": {
+    "bytes": 33580,
+    "sha256": "709a1de75ab9e66fdfe5b43d9f863d0551b59109281bed5f963c61544f7837fe"
+  },
+  "public/media/algyr/platform/frames/f_105.webp": {
+    "bytes": 32898,
+    "sha256": "ab5579cb888d08698109f98e6a63f49f90240882bd95dced0329e82aa9582d69"
+  },
+  "public/media/algyr/platform/frames/f_106.webp": {
+    "bytes": 31614,
+    "sha256": "a499d529ad305190990a9f891ad3704e4fbbd2f15476d87a5a50595dc548fdbb"
+  },
+  "public/media/algyr/platform/frames/f_107.webp": {
+    "bytes": 32278,
+    "sha256": "1fc3180e736673ecb276a4b209095129352cd11706bc0049c7be08171ee9aaeb"
+  },
+  "public/media/algyr/platform/frames/f_108.webp": {
+    "bytes": 30502,
+    "sha256": "dca125162c36331aecbc38ff684270e36d5ab33fac63a83156509ad293c45cdd"
+  },
+  "public/media/algyr/platform/frames/f_109.webp": {
+    "bytes": 31220,
+    "sha256": "94c1c472be12b4bcd807c66f84f383b68d2660bc41a6e11d6053aa68afd99820"
+  },
+  "public/media/algyr/platform/frames/f_110.webp": {
+    "bytes": 29858,
+    "sha256": "caa5705d2e1793799c42f37563d9bf5714afb4eb9078ad3c7c97d8ecfef0ddbb"
+  },
+  "public/media/algyr/platform/frames/f_111.webp": {
+    "bytes": 30046,
+    "sha256": "d12ea0832d1fbc1da2ff56756b3da95172ad1e9f3230de253bcbcee13d21c709"
+  },
+  "public/media/algyr/platform/frames/f_112.webp": {
+    "bytes": 30108,
+    "sha256": "4db9ffb1f4bf72dbae3aab7e929c09700a6854674e2709d4d87a95570c7069b3"
+  },
+  "public/media/algyr/platform/frames/f_113.webp": {
+    "bytes": 30208,
+    "sha256": "dab3bee104863b60dfd423911375fa459ed5f1ab00910c5ab3ea5a4e7c967c21"
+  },
+  "public/media/algyr/platform/frames/f_114.webp": {
+    "bytes": 29836,
+    "sha256": "44e723d93845b99c5b2e970776a1191f2d2271f881c220f2fd6f8ddbb2bafae2"
+  },
+  "public/media/algyr/platform/frames/f_115.webp": {
+    "bytes": 29378,
+    "sha256": "7dd1abea314f1f4597ecc547c4cb93c58be4cfb7912e22971c7a83799a88b69e"
+  },
+  "public/media/algyr/platform/frames/f_116.webp": {
+    "bytes": 29758,
+    "sha256": "88328c049747729ba8c74b5e4a38a94ebdc62f747d37e42e9a2c77f67ce2c85c"
+  },
+  "public/media/algyr/platform/frames/f_117.webp": {
+    "bytes": 30018,
+    "sha256": "41c6b92caa815c17b89eab8135ca5c51840f1b637eb204a0478ab500335933a1"
+  },
+  "public/media/algyr/platform/frames/f_118.webp": {
+    "bytes": 30556,
+    "sha256": "46e6ab142e1ac9ab5153464ef6d8a5fa7842e21527092d6ba7baeed8d799ba60"
+  },
+  "public/media/algyr/platform/frames/f_119.webp": {
+    "bytes": 32994,
+    "sha256": "f2887f4074ef95edf7643dc61bf6cbca162d1ee2f3bb402de332d20cfd89be26"
+  },
+  "public/media/algyr/platform/poster-mobile.webp": {
+    "bytes": 24930,
+    "sha256": "5c1b411947c90e0fa234bc738ea0f8f1ff47d39ae6c27005f8de2ae428ebd3c1"
+  },
+  "public/media/algyr/platform/poster.webp": {
+    "bytes": 52618,
+    "sha256": "400e98aafe64d9776f1ea1bb9d81c5e1c194d6e842c582ab052aeda57a70cf68"
+  },
+  "public/media/algyr/platform/shot-1.webp": {
+    "bytes": 32994,
+    "sha256": "f2887f4074ef95edf7643dc61bf6cbca162d1ee2f3bb402de332d20cfd89be26"
+  },
+  "public/media/algyr/platform/shot-2.webp": {
+    "bytes": 26172,
+    "sha256": "92473eecd72e85ac80c218df6c74a46d14437d749089baa0db8cf9f296acb34b"
+  },
+  "public/media/algyr/platform/shot-3.webp": {
+    "bytes": 35998,
+    "sha256": "f7cfa8cae3b380b385db58f228ee53c7a4a01a87835733f18c80014f35ae142f"
+  },
+  "public/media/algyr/platform/shot-4.webp": {
+    "bytes": 36460,
+    "sha256": "ee138ba8c5e85f8903ad04be17557a4b562da9bc0a394feacd4e8c7744a5f626"
+  },
+  "public/media/algyr/platform/shot-5.webp": {
+    "bytes": 26186,
+    "sha256": "74031ccf355fdb81496e65bffe2fc72c9e59742c9353947a208081ff80983174"
+  },
+  "public/media/algyr/platform/shot-6.webp": {
+    "bytes": 21028,
+    "sha256": "27ed2dc49daae93c0d59db118d95c384a1d4817e3d10af8717813d6555d83509"
+  },
+  "public/robots.txt": {
+    "bytes": 24,
+    "sha256": "e5c4b84484ee4216e9373be99380320c25dd94805f99f0a805846f087636553f"
+  },
+  "public/vendor/algyr-scroll/algyr-scroll.css": {
+    "bytes": 9733,
+    "sha256": "d30b08a3ff399f209b4dee653ecb8a25894f77e8422c67be2c63213d3b9ffc54"
+  },
+  "public/vendor/algyr-scroll/algyr-scroll.js": {
+    "bytes": 146629,
+    "sha256": "f0b63c3d02a364e778e29d21ab6b06a55b66b885933a528d0c45aff6f357d771"
+  },
+  "public/vendor/algyr-scroll/assets/gotham-bold-5XChUxNd.woff2": {
+    "bytes": 24864,
+    "sha256": "7cee274a95c56e8b95ed306a893494814c33c55ed40d4ca3977b6d6712c83921"
+  },
+  "public/vendor/algyr-scroll/assets/gotham-medium-CTRdVB-J.woff2": {
+    "bytes": 26004,
+    "sha256": "9c50a061f73b9c068a42208ca7200672f00e6d82d428c56d068aa92a36bf6888"
+  },
+  "public/vendor/algyr-scroll/assets/gotham-regular-C6a2Cg7N.woff2": {
+    "bytes": 26252,
+    "sha256": "976d201aad1209ba1925b6f423db1c88825bce19c0ff25cec4f29063314a78cb"
+  },
+  "public/vendor/algyr-scroll/assets/inter-bold-B0RMAd2-.woff2": {
+    "bytes": 111232,
+    "sha256": "333845160356ccd2cf62c41006b853e89904bb512686098916bb69ec0f878eac"
+  },
+  "README.md": {
+    "bytes": 2723,
+    "sha256": "eb69e10affb08a7d9be74b95fe219e6425307b407e263b9315db3d3860e88ae8"
+  },
+  "resources/css/algyr-fonts.css": {
+    "bytes": 670,
+    "sha256": "16bf08ecb6ca9b7d5c52e98f8c23c617a868cd4a62e4c1cb8746f2f62f52c109"
+  },
+  "resources/css/algyr-scroll.css": {
+    "bytes": 10027,
+    "sha256": "b46833a5b6691c6c551c2031f16ac38d48bab65c69e302006d60ac536b1988c6"
+  },
+  "resources/css/demo.css": {
+    "bytes": 2806,
+    "sha256": "a06ed25d9ca04ae05a69c839bb87157e3fd45a0da3b3ec94454256f0b618994b"
+  },
+  "resources/fonts/gotham-bold.woff2": {
+    "bytes": 24864,
+    "sha256": "7cee274a95c56e8b95ed306a893494814c33c55ed40d4ca3977b6d6712c83921"
+  },
+  "resources/fonts/gotham-medium.woff2": {
+    "bytes": 26004,
+    "sha256": "9c50a061f73b9c068a42208ca7200672f00e6d82d428c56d068aa92a36bf6888"
+  },
+  "resources/fonts/gotham-regular.woff2": {
+    "bytes": 26252,
+    "sha256": "976d201aad1209ba1925b6f423db1c88825bce19c0ff25cec4f29063314a78cb"
+  },
+  "resources/fonts/inter-bold.woff2": {
+    "bytes": 111232,
+    "sha256": "333845160356ccd2cf62c41006b853e89904bb512686098916bb69ec0f878eac"
+  },
+  "resources/js/algyr-scroll-entry.js": {
+    "bytes": 484,
+    "sha256": "3db2a5f45f200571bb6dc5c54ff41dcd9a6b0c7fd2366d897bf30dcdc06aaced"
+  },
+  "resources/js/algyr-scroll.js": {
+    "bytes": 14292,
+    "sha256": "e5e5a6fba14728943f46c2cf7c85b8609ad143ffad8afc3317ca04c722127616"
+  },
+  "resources/js/demo.js": {
+    "bytes": 27,
+    "sha256": "2ae1b85e406e556bfc85f2d64a3acb9dd69393a6376fe0664559f851f174fec4"
+  },
+  "resources/js/frame-sequence.js": {
+    "bytes": 6280,
+    "sha256": "1501bd008f50f96c6e2ad058360fdf0aac008f94ae2bf809eb0539d78cd56201"
+  },
+  "resources/views/components/algyr-scroll-screens.blade.php": {
+    "bytes": 334,
+    "sha256": "fc5509d83cf2aa3899b9eb2c6730f202f0853433ef87654401c4eb89efe297c7"
+  },
+  "resources/views/components/algyr-scroll.blade.php": {
+    "bytes": 6021,
+    "sha256": "4f1f9bd4160d066cbd6b31cd1e73c9ca45f47a4fd597b01fec10abcf2a16e3b7"
+  },
+  "resources/views/demo.blade.php": {
+    "bytes": 2482,
+    "sha256": "862d668323dca90b489e3c582de178848b34da765c346f3fecb1201410562890"
+  },
+  "routes/console.php": {
+    "bytes": 210,
+    "sha256": "9adccc33e7dd400683e434774077c7fdb2f299c5712cedf16a43fdf56f2850fa"
+  },
+  "routes/web.php": {
+    "bytes": 122,
+    "sha256": "af56e600d2c1db0ab8c18e4572d704d246b79a7d55ed9dbd0076f4de566f1e38"
+  },
+  "scripts/browser-integration-checks.cjs": {
+    "bytes": 4959,
+    "sha256": "80ea6b003e24e0317c8d301da87ceb3333dbde93eaaf0ec3a64605db8c57a00f"
+  },
+  "scripts/browser-media-regression.cjs": {
+    "bytes": 3475,
+    "sha256": "7540921a4382143f897f5f7677e6ddab00f85985d09c2ab795a4d8c6ddca6031"
+  },
+  "scripts/browser-motion-checks.cjs": {
+    "bytes": 13073,
+    "sha256": "638f00b1f4dc033b929cc1e666af2fc40ea32f1c67b6804e337a9d785922abd8"
+  },
+  "scripts/browser-scroll-regressions.cjs": {
+    "bytes": 3427,
+    "sha256": "cf2759e77f557f9655d15f70386ad3047060992b4742332d5efb4a623bc1c601"
+  },
+  "scripts/build-platform-assets.py": {
+    "bytes": 1456,
+    "sha256": "0f1f98362b3af20f3b2a43aa3431617dc30cecb360192eacec806274cb8cc0fd"
+  },
+  "scripts/check-screen-tracking.py": {
+    "bytes": 3183,
+    "sha256": "df99191f64ec2a02cf857274cdc8e2249c7beadf640f5b55447ad06d48f7d9f9"
+  },
+  "scripts/check-video-aspect.py": {
+    "bytes": 794,
+    "sha256": "0ef986597a140de9a28f654e613a12ee980988e9377587de5c0bb9f177effc46"
+  },
+  "scripts/composite-laptop.py": {
+    "bytes": 3454,
+    "sha256": "cd1e0409b717f94511a667a846b2a50256a0a6654f381b9964b833dd21ad2664"
+  },
+  "scripts/export-preview.mjs": {
+    "bytes": 792,
+    "sha256": "743eb3a554f49a324c0d670c4b843be4dced691b626b165cb0b3c88f33086662"
+  },
+  "scripts/make-frames.py": {
+    "bytes": 6281,
+    "sha256": "ea6bbb2d1eb080f6dfd815b1932c56078b60c49a39b9fecfa9565d51e57bcd7b"
+  },
+  "scripts/package.py": {
+    "bytes": 4410,
+    "sha256": "6ed6263605402711777bee06d443d97ff1c063f2afc3bacdccb7b5d96118a62d"
+  },
+  "scripts/preview-server.mjs": {
+    "bytes": 2974,
+    "sha256": "83008553eb4214f3e5854a05491a5eb9898bc0e3288aa4d0e9919aecb3cf6a27"
+  },
+  "scripts/track-laptop.py": {
+    "bytes": 2941,
+    "sha256": "a2e749f3eb601492eb7e16e9d4dd30464fa527263764294508a4a8cd4cee8c84"
+  },
+  "start-preview.cmd": {
+    "bytes": 67,
+    "sha256": "f40607bf5acdb64bfabb9c11ff7c5612879f6ad29906290fb56b5419ffbcdc9b"
+  },
+  "storage/app/.gitignore": {
+    "bytes": 33,
+    "sha256": "993b9e3709d7b5189da331725d1169d79e561a509db2490b722b525073d2d976"
+  },
+  "storage/app/private/.gitignore": {
+    "bytes": 14,
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+  },
+  "storage/app/public/.gitignore": {
+    "bytes": 14,
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+  },
+  "storage/framework/.gitignore": {
+    "bytes": 119,
+    "sha256": "2d452d65596636197757afa17df52331c84da7bb74ee0f3462fd5be4eb6afdc6"
+  },
+  "storage/framework/cache/.gitignore": {
+    "bytes": 21,
+    "sha256": "32f79194633ddb34f013c6ee8819d112104ff822357adf308ec385b46a7f42f6"
+  },
+  "storage/framework/cache/data/.gitignore": {
+    "bytes": 14,
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+  },
+  "storage/framework/sessions/.gitignore": {
+    "bytes": 14,
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+  },
+  "storage/framework/testing/.gitignore": {
+    "bytes": 14,
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+  },
+  "storage/framework/views/.gitignore": {
+    "bytes": 14,
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+  },
+  "storage/logs/.gitignore": {
+    "bytes": 14,
+    "sha256": "240a3e0d37d2e86b614063f5347eb02d4f99ca6c254de6b82871ff8d95532a7d"
+  },
+  "tests/Feature/CinematicDemoTest.php": {
+    "bytes": 4591,
+    "sha256": "e088ab629933da933aa705d23acd734f7f0670169da73cd0490779e127c7b1ca"
+  },
+  "tests/TestCase.php": {
+    "bytes": 142,
+    "sha256": "c7c209f5579c42647c1f7b2a79ac828e8b54ac62a98442045a6e94fa2c0d0ebc"
+  },
+  "vite.config.js": {
+    "bytes": 382,
+    "sha256": "f9d3b7b24cbfce8d6dc8fb5bbb3e9382cb1e3a4193ffb9dafec3858409b0656f"
+  },
+  "vite.embed.config.js": {
+    "bytes": 694,
+    "sha256": "253014013b400bf1670f6e9f9f8fcf8309afbf51bb752ece569963bbce50eb73"
+  }
+}

@@ -1,0 +1,566 @@
+{
+  "date": "2026-10-12",
+  "revision": "20261012-7",
+  "renderer": "canvas-frame-sequence",
+  "chromium": {
+    "engine": "chromium",
+    "passed": 93,
+    "checks": {
+      "desktop_400vh": true,
+      "desktop_header_clear": true,
+      "desktop_stage_fits": true,
+      "desktop_frame_scrub": true,
+      "desktop_no_overflow": true,
+      "desktop_equal_ratio": true,
+      "desktop_captions_hidden_during_camera": true,
+      "desktop_lenis": true,
+      "desktop_no_native_player": true,
+      "desktop_single_pin": true,
+      "desktop_progressive_prefetch": true,
+      "desktop_frame_budget": true,
+      "desktop_idle_canvas_frozen": true,
+      "desktop_forward_video_changes": true,
+      "desktop_reverse_exact_video_frame": true,
+      "desktop_opening_dead_zone": true,
+      "desktop_exact_endframe_handoff": true,
+      "desktop_courses_first": true,
+      "desktop_captions_now_visible": true,
+      "desktop_soft_mask": true,
+      "desktop_idle_mask_frozen": true,
+      "desktop_last_profile": true,
+      "desktop_no_screenshot_zoom": true,
+      "desktop_ending_dead_zone": true,
+      "desktop_reverse_mask_pixels": true,
+      "desktop_step_navigation": true,
+      "desktop_skip_exits": true,
+      "desktop_resize_unpins": true,
+      "desktop_resize_restores_one_pin": true,
+      "desktop_fractional_width": true,
+      "desktop_manual_static": true,
+      "desktop_manual_animation_restore": true,
+      "desktop_no_cta": true,
+      "desktop-large_400vh": true,
+      "desktop-large_header_clear": true,
+      "desktop-large_stage_fits": true,
+      "desktop-large_frame_scrub": true,
+      "desktop-large_no_overflow": true,
+      "desktop-large_equal_ratio": true,
+      "desktop-large_captions_hidden_during_camera": true,
+      "desktop-large_lenis": true,
+      "desktop-large_no_native_player": true,
+      "desktop-large_single_pin": true,
+      "laptop_400vh": true,
+      "laptop_header_clear": true,
+      "laptop_stage_fits": true,
+      "laptop_frame_scrub": true,
+      "laptop_no_overflow": true,
+      "laptop_equal_ratio": true,
+      "laptop_captions_hidden_during_camera": true,
+      "laptop_lenis": true,
+      "laptop_no_native_player": true,
+      "laptop_single_pin": true,
+      "tablet_400vh": true,
+      "tablet_header_clear": true,
+      "tablet_stage_fits": true,
+      "tablet_frame_scrub": true,
+      "tablet_no_overflow": true,
+      "tablet_equal_ratio": true,
+      "tablet_captions_hidden_during_camera": true,
+      "tablet_lenis": true,
+      "tablet_no_native_player": true,
+      "tablet_single_pin": true,
+      "android_mobile_no_pin": true,
+      "android_no_lenis": true,
+      "android_no_player": true,
+      "android_no_video_frames": true,
+      "android_light_poster": true,
+      "android_no_overflow": true,
+      "android_swipe_navigation": true,
+      "android_keyboard_gallery": true,
+      "mobile-small_mobile_no_pin": true,
+      "mobile-small_no_lenis": true,
+      "mobile-small_no_player": true,
+      "mobile-small_no_video_frames": true,
+      "mobile-small_light_poster": true,
+      "mobile-small_no_overflow": true,
+      "mobile-small_swipe_navigation": true,
+      "mobile-small_keyboard_gallery": true,
+      "reduced_no_pin": true,
+      "reduced_usable_gallery": true,
+      "reduced_last_only": true,
+      "reduced_no_lenis": true,
+      "reduced_no_heavy_frames": true,
+      "no-js_no_pin": true,
+      "no-js_usable_gallery": true,
+      "failed-first-frame_no_pin": true,
+      "failed-first-frame_usable_gallery": true,
+      "failed-screenshot_no_pin": true,
+      "failed-screenshot_usable_gallery": true,
+      "rapid-resize_recovers": true,
+      "unrelated_page_unchanged": true,
+      "no_browser_exceptions": true
+    },
+    "failures": [],
+    "errors": [],
+    "details": {
+      "desktop": {
+        "mode": "desktop",
+        "ready": true,
+        "progress": 0.3,
+        "scene": "student",
+        "start": 56,
+        "end": 3656,
+        "pinOffset": 102,
+        "steps": [
+          0.685,
+          0.74162,
+          0.78762,
+          0.8336199999999999,
+          0.87962,
+          0.9256199999999999
+        ],
+        "phases": {
+          "videoStart": 0.05,
+          "videoEnd": 0.65,
+          "screensStart": 0.72,
+          "screensEnd": 0.95
+        },
+        "currentStep": -1,
+        "frame": 50,
+        "desiredFrame": 50,
+        "loadedFrames": 85,
+        "decodedFrames": 5,
+        "sequenceBytes": 3633534,
+        "frameFailures": 0,
+        "nativePlayerElements": 0,
+        "lenis": true,
+        "ownedLenis": true,
+        "top": 102,
+        "bottom": 900,
+        "actionsBottom": 872.984375,
+        "ratio": 1.7778259853819711,
+        "horizontal": 0,
+        "priority": [
+          "f_000.webp",
+          "f_119.webp",
+          "f_010.webp",
+          "f_020.webp",
+          "f_030.webp",
+          "f_040.webp"
+        ],
+        "crossfadePixelDifference": {
+          "max": 2,
+          "mean": 0.039705946180555556
+        },
+        "reverseMaskDifference": {
+          "max": 4,
+          "mean": 0.005948546067197415
+        }
+      },
+      "desktop-large": {
+        "mode": "desktop",
+        "ready": true,
+        "progress": 0.3,
+        "scene": "student",
+        "start": 56,
+        "end": 4376,
+        "pinOffset": 102,
+        "steps": [
+          0.685,
+          0.74162,
+          0.78762,
+          0.8336199999999999,
+          0.87962,
+          0.9256199999999999
+        ],
+        "phases": {
+          "videoStart": 0.05,
+          "videoEnd": 0.65,
+          "screensStart": 0.72,
+          "screensEnd": 0.95
+        },
+        "currentStep": -1,
+        "frame": 50,
+        "desiredFrame": 50,
+        "loadedFrames": 74,
+        "decodedFrames": 5,
+        "sequenceBytes": 3225928,
+        "frameFailures": 0,
+        "nativePlayerElements": 0,
+        "lenis": true,
+        "ownedLenis": true,
+        "top": 102,
+        "bottom": 1080,
+        "actionsBottom": 1032.90625,
+        "ratio": 1.7777777777777777,
+        "horizontal": 0
+      },
+      "laptop": {
+        "mode": "desktop",
+        "ready": true,
+        "progress": 0.3001302,
+        "scene": "student",
+        "start": 56,
+        "end": 3128,
+        "pinOffset": 102,
+        "steps": [
+          0.685,
+          0.74162,
+          0.78762,
+          0.8336199999999999,
+          0.87962,
+          0.9256199999999999
+        ],
+        "phases": {
+          "videoStart": 0.05,
+          "videoEnd": 0.65,
+          "screensStart": 0.72,
+          "screensEnd": 0.95
+        },
+        "currentStep": -1,
+        "frame": 50,
+        "desiredFrame": 50,
+        "loadedFrames": 82,
+        "decodedFrames": 5,
+        "sequenceBytes": 3533318,
+        "frameFailures": 0,
+        "nativePlayerElements": 0,
+        "lenis": true,
+        "ownedLenis": true,
+        "top": 102,
+        "bottom": 768,
+        "actionsBottom": 744.953125,
+        "ratio": 1.777837862196386,
+        "horizontal": 0
+      },
+      "tablet": {
+        "mode": "desktop",
+        "ready": true,
+        "progress": 0.3000488,
+        "scene": "student",
+        "start": 56,
+        "end": 4152,
+        "pinOffset": 68,
+        "steps": [
+          0.685,
+          0.74162,
+          0.78762,
+          0.8336199999999999,
+          0.87962,
+          0.9256199999999999
+        ],
+        "phases": {
+          "videoStart": 0.05,
+          "videoEnd": 0.65,
+          "screensStart": 0.72,
+          "screensEnd": 0.95
+        },
+        "currentStep": -1,
+        "frame": 50,
+        "desiredFrame": 50,
+        "loadedFrames": 87,
+        "decodedFrames": 5,
+        "sequenceBytes": 3701172,
+        "frameFailures": 0,
+        "nativePlayerElements": 0,
+        "lenis": true,
+        "ownedLenis": true,
+        "top": 68,
+        "bottom": 1024,
+        "actionsBottom": 875.859375,
+        "ratio": 1.7777777777777777,
+        "horizontal": 0
+      }
+    }
+  },
+  "webkit": {
+    "engine": "webkit",
+    "passed": 63,
+    "checks": {
+      "safari-desktop_400vh": true,
+      "safari-desktop_header_clear": true,
+      "safari-desktop_stage_fits": true,
+      "safari-desktop_frame_scrub": true,
+      "safari-desktop_no_overflow": true,
+      "safari-desktop_equal_ratio": true,
+      "safari-desktop_captions_hidden_during_camera": true,
+      "safari-desktop_lenis": true,
+      "safari-desktop_no_native_player": true,
+      "safari-desktop_single_pin": true,
+      "safari-desktop_progressive_prefetch": true,
+      "safari-desktop_frame_budget": true,
+      "safari-desktop_idle_canvas_frozen": true,
+      "safari-desktop_forward_video_changes": true,
+      "safari-desktop_reverse_exact_video_frame": true,
+      "safari-desktop_opening_dead_zone": true,
+      "safari-desktop_exact_endframe_handoff": true,
+      "safari-desktop_courses_first": true,
+      "safari-desktop_captions_now_visible": true,
+      "safari-desktop_soft_mask": true,
+      "safari-desktop_idle_mask_frozen": true,
+      "safari-desktop_last_profile": true,
+      "safari-desktop_no_screenshot_zoom": true,
+      "safari-desktop_ending_dead_zone": true,
+      "safari-desktop_reverse_mask_pixels": true,
+      "safari-desktop_step_navigation": true,
+      "safari-desktop_skip_exits": true,
+      "safari-desktop_resize_unpins": true,
+      "safari-desktop_resize_restores_one_pin": true,
+      "safari-desktop_fractional_width": true,
+      "safari-desktop_manual_static": true,
+      "safari-desktop_manual_animation_restore": true,
+      "safari-desktop_no_cta": true,
+      "iphone_mobile_no_pin": true,
+      "iphone_no_lenis": true,
+      "iphone_no_player": true,
+      "iphone_no_video_frames": true,
+      "iphone_light_poster": true,
+      "iphone_no_overflow": true,
+      "iphone_swipe_navigation": true,
+      "iphone_keyboard_gallery": true,
+      "iphone-small_mobile_no_pin": true,
+      "iphone-small_no_lenis": true,
+      "iphone-small_no_player": true,
+      "iphone-small_no_video_frames": true,
+      "iphone-small_light_poster": true,
+      "iphone-small_no_overflow": true,
+      "iphone-small_swipe_navigation": true,
+      "iphone-small_keyboard_gallery": true,
+      "reduced_no_pin": true,
+      "reduced_usable_gallery": true,
+      "reduced_last_only": true,
+      "reduced_no_lenis": true,
+      "reduced_no_heavy_frames": true,
+      "no-js_no_pin": true,
+      "no-js_usable_gallery": true,
+      "failed-first-frame_no_pin": true,
+      "failed-first-frame_usable_gallery": true,
+      "failed-screenshot_no_pin": true,
+      "failed-screenshot_usable_gallery": true,
+      "rapid-resize_recovers": true,
+      "unrelated_page_unchanged": true,
+      "no_browser_exceptions": true
+    },
+    "failures": [],
+    "errors": [],
+    "details": {
+      "safari-desktop": {
+        "mode": "desktop",
+        "ready": true,
+        "progress": 0.3,
+        "scene": "student",
+        "start": 56,
+        "end": 3656,
+        "pinOffset": 102,
+        "steps": [
+          0.685,
+          0.74162,
+          0.78762,
+          0.8336199999999999,
+          0.87962,
+          0.9256199999999999
+        ],
+        "phases": {
+          "videoStart": 0.05,
+          "videoEnd": 0.65,
+          "screensStart": 0.72,
+          "screensEnd": 0.95
+        },
+        "currentStep": -1,
+        "frame": 50,
+        "desiredFrame": 50,
+        "loadedFrames": 38,
+        "decodedFrames": 3,
+        "sequenceBytes": 1711652,
+        "frameFailures": 0,
+        "nativePlayerElements": 0,
+        "lenis": true,
+        "ownedLenis": true,
+        "top": 102,
+        "bottom": 900,
+        "actionsBottom": 872.984375,
+        "ratio": 1.7778259853819711,
+        "horizontal": 0,
+        "priority": [
+          "f_000.webp",
+          "f_119.webp",
+          "f_010.webp",
+          "f_020.webp",
+          "f_030.webp",
+          "f_040.webp"
+        ],
+        "crossfadePixelDifference": {
+          "max": 0,
+          "mean": 0
+        },
+        "reverseMaskDifference": {
+          "max": 0,
+          "mean": 0
+        }
+      }
+    }
+  },
+  "integration": {
+    "results": {
+      "publicStylesheetStatus": 200,
+      "host_styles_pin_unclipped": true,
+      "header_resize_updates_pin": true,
+      "two_independent_instances": true,
+      "removed_instance_releases_pin": true,
+      "init_idempotent": true,
+      "destroy_restores_native_gallery": true,
+      "reuse_host_lenis": true,
+      "host_lenis_not_destroyed": true
+    },
+    "failures": []
+  },
+  "scroll_regressions": [
+    {
+      "engine": "chromium",
+      "checks": {
+        "no_handoff_move_or_shrink": true,
+        "caption_below_image": true,
+        "exit_down_all_wheel_distance": true,
+        "exit_down_no_reverse_jump": true,
+        "exit_down_settles": true,
+        "enter_up_all_wheel_distance": true,
+        "enter_up_no_reverse_jump": true,
+        "enter_up_settles": true,
+        "after_block_native_scroll": true,
+        "no_horizontal_scroll": true,
+        "single_pin": true
+      },
+      "failures": [],
+      "detail": {
+        "geometry": [
+          {
+            "x": 303.828125,
+            "y": 262.3125,
+            "width": 832.328125,
+            "height": 468.171875
+          },
+          {
+            "x": 303.828125,
+            "y": 262.3125,
+            "width": 832.328125,
+            "height": 468.171875
+          },
+          {
+            "x": 303.828125,
+            "y": 262.3125,
+            "width": 832.328125,
+            "height": 468.171875
+          },
+          {
+            "x": 303.828125,
+            "y": 262.3125,
+            "width": 832.328125,
+            "height": 468.171875
+          },
+          {
+            "x": 303.828125,
+            "y": 262.3125,
+            "width": 832.328125,
+            "height": 468.171875
+          },
+          {
+            "x": 303.828125,
+            "y": 262.3125,
+            "width": 832.328125,
+            "height": 468.171875
+          },
+          {
+            "x": 303.828125,
+            "y": 262.3125,
+            "width": 832.328125,
+            "height": 468.171875
+          }
+        ],
+        "exit_down": {
+          "expected": 4696,
+          "actual": 4696
+        },
+        "enter_up": {
+          "expected": 2616,
+          "actual": 2616
+        }
+      }
+    },
+    {
+      "engine": "webkit",
+      "checks": {
+        "no_handoff_move_or_shrink": true,
+        "caption_below_image": true,
+        "exit_down_all_wheel_distance": true,
+        "exit_down_no_reverse_jump": true,
+        "exit_down_settles": true,
+        "enter_up_all_wheel_distance": true,
+        "enter_up_no_reverse_jump": true,
+        "enter_up_settles": true,
+        "after_block_native_scroll": true,
+        "no_horizontal_scroll": true,
+        "single_pin": true
+      },
+      "failures": [],
+      "detail": {
+        "geometry": [
+          {
+            "x": 303.828125,
+            "y": 262.3125,
+            "width": 832.328125,
+            "height": 468.171875
+          },
+          {
+            "x": 303.828125,
+            "y": 262.3125,
+            "width": 832.328125,
+            "height": 468.171875
+          },
+          {
+            "x": 303.828125,
+            "y": 262.3125,
+            "width": 832.328125,
+            "height": 468.171875
+          },
+          {
+            "x": 303.828125,
+            "y": 262.3125,
+            "width": 832.328125,
+            "height": 468.171875
+          },
+          {
+            "x": 303.828125,
+            "y": 262.3125,
+            "width": 832.328125,
+            "height": 468.171875
+          },
+          {
+            "x": 303.828125,
+            "y": 262.3125,
+            "width": 832.328125,
+            "height": 468.171875
+          },
+          {
+            "x": 303.828125,
+            "y": 262.3125,
+            "width": 832.328125,
+            "height": 468.171875
+          }
+        ],
+        "exit_down": {
+          "expected": 4696,
+          "actual": 4696
+        },
+        "enter_up": {
+          "expected": 2616,
+          "actual": 2616
+        }
+      }
+    }
+  ],
+  "phpunit": {
+    "tests": 6,
+    "assertions": 175,
+    "passed": true
+  }
+}

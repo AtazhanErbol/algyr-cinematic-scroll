@@ -1,0 +1,18 @@
+{
+  "name": "algyr-cinematic-scroll",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vite build --config vite.embed.config.js"
+  },
+  "dependencies": {
+    "gsap": "3.15.0",
+    "lenis": "1.3.26"
+  },
+  "devDependencies": {
+    "laravel-vite-plugin": "^2.0.0",
+    "vite": "^7.0.0"
+  }
+}

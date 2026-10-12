@@ -1,0 +1,36 @@
+*.log
+.DS_Store
+.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+/auth.json
+/node_modules
+# Keep the built demo and embed assets so the standalone preview runs after clone.
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
+Homestead.json
+Homestead.yaml
+Thumbs.db
+
+# Local diagnostics and media experiments (the final inputs live in media-source).
+/output/
+/work/
+/work-media/
+/.playwright-cli/
+/.playwright/
+__pycache__/
+*.pyc
+*.build.mp4
+.env.*
+!.env.example

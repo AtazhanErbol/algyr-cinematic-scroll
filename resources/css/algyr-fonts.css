@@ -1,0 +1,5 @@
+/* Original public webfonts used by algyr.kz, inspected 2026-10-09. */
+@font-face { font-family:'Algyr Gotham';src:url('../fonts/gotham-regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap; }
+@font-face { font-family:'Algyr Gotham';src:url('../fonts/gotham-medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap; }
+@font-face { font-family:'Algyr Gotham';src:url('../fonts/gotham-bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap; }
+@font-face { font-family:'Algyr Inter';src:url('../fonts/inter-bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap; }

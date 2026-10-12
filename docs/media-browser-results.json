@@ -1,0 +1,161 @@
+{
+  "revision": "20261012-8",
+  "checks": 28,
+  "failures": 0,
+  "results": [
+    {
+      "engine": "chromium",
+      "revision": "20261012-8",
+      "checks": {
+        "current_frame_42": true,
+        "current_frame_50": true,
+        "current_frame_70": true,
+        "current_frame_110": true,
+        "current_frame_119": true,
+        "stopped_frame_frozen": true,
+        "reverse_identical": true,
+        "fresh_frame_urls": true,
+        "no_native_video": true,
+        "no_horizontal_scroll": true,
+        "mobile_no_frames": true,
+        "mobile_no_pin": true,
+        "mobile_no_overflow": true,
+        "no_js_errors": true
+      },
+      "failures": [],
+      "details": {
+        "frame_42": {
+          "max": 2,
+          "mean": 0.07833658854166667
+        },
+        "frame_50": {
+          "max": 2,
+          "mean": 0.08123942057291667
+        },
+        "frame_70": {
+          "max": 2,
+          "mean": 0.08509250217013889
+        },
+        "frame_110": {
+          "max": 2,
+          "mean": 0.054766710069444446
+        },
+        "frame_119": {
+          "max": 2,
+          "mean": 0.039705946180555556
+        },
+        "state": {
+          "mode": "desktop",
+          "ready": true,
+          "progress": 0.302222,
+          "scene": "student",
+          "start": 56,
+          "end": 3656,
+          "pinOffset": 102,
+          "steps": [
+            0.685,
+            0.74162,
+            0.78762,
+            0.8336199999999999,
+            0.87962,
+            0.9256199999999999
+          ],
+          "phases": {
+            "videoStart": 0.05,
+            "videoEnd": 0.65,
+            "screensStart": 0.72,
+            "screensEnd": 0.95
+          },
+          "currentStep": -1,
+          "frame": 50,
+          "desiredFrame": 50,
+          "loadedFrames": 120,
+          "decodedFrames": 10,
+          "sequenceBytes": 4741922,
+          "frameFailures": 0,
+          "nativePlayerElements": 0,
+          "lenis": true,
+          "ownedLenis": true
+        }
+      },
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "revision": "20261012-8",
+      "checks": {
+        "current_frame_42": true,
+        "current_frame_50": true,
+        "current_frame_70": true,
+        "current_frame_110": true,
+        "current_frame_119": true,
+        "stopped_frame_frozen": true,
+        "reverse_identical": true,
+        "fresh_frame_urls": true,
+        "no_native_video": true,
+        "no_horizontal_scroll": true,
+        "mobile_no_frames": true,
+        "mobile_no_pin": true,
+        "mobile_no_overflow": true,
+        "no_js_errors": true
+      },
+      "failures": [],
+      "details": {
+        "frame_42": {
+          "max": 0,
+          "mean": 0
+        },
+        "frame_50": {
+          "max": 0,
+          "mean": 0
+        },
+        "frame_70": {
+          "max": 0,
+          "mean": 0
+        },
+        "frame_110": {
+          "max": 0,
+          "mean": 0
+        },
+        "frame_119": {
+          "max": 0,
+          "mean": 0
+        },
+        "state": {
+          "mode": "desktop",
+          "ready": true,
+          "progress": 0.301944,
+          "scene": "student",
+          "start": 56,
+          "end": 3656,
+          "pinOffset": 102,
+          "steps": [
+            0.685,
+            0.74162,
+            0.78762,
+            0.8336199999999999,
+            0.87962,
+            0.9256199999999999
+          ],
+          "phases": {
+            "videoStart": 0.05,
+            "videoEnd": 0.65,
+            "screensStart": 0.72,
+            "screensEnd": 0.95
+          },
+          "currentStep": -1,
+          "frame": 50,
+          "desiredFrame": 50,
+          "loadedFrames": 120,
+          "decodedFrames": 10,
+          "sequenceBytes": 4741922,
+          "frameFailures": 0,
+          "nativePlayerElements": 0,
+          "lenis": true,
+          "ownedLenis": true
+        }
+      },
+      "errors": []
+    }
+  ]
+}

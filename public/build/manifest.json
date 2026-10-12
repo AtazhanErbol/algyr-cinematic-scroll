@@ -1,0 +1,42 @@
+{
+  "resources/fonts/gotham-bold.woff2": {
+    "file": "assets/gotham-bold-5XChUxNd.woff2",
+    "src": "resources/fonts/gotham-bold.woff2"
+  },
+  "resources/fonts/gotham-medium.woff2": {
+    "file": "assets/gotham-medium-CTRdVB-J.woff2",
+    "src": "resources/fonts/gotham-medium.woff2"
+  },
+  "resources/fonts/gotham-regular.woff2": {
+    "file": "assets/gotham-regular-C6a2Cg7N.woff2",
+    "src": "resources/fonts/gotham-regular.woff2"
+  },
+  "resources/fonts/inter-bold.woff2": {
+    "file": "assets/inter-bold-B0RMAd2-.woff2",
+    "src": "resources/fonts/inter-bold.woff2"
+  },
+  "resources/js/algyr-scroll-entry.js": {
+    "file": "assets/algyr-scroll-entry-Bs0eay1_.js",
+    "name": "algyr-scroll-entry",
+    "src": "resources/js/algyr-scroll-entry.js",
+    "isEntry": true,
+    "css": [
+      "assets/algyr-scroll-entry-zmuhYSm7.css"
+    ],
+    "assets": [
+      "assets/gotham-regular-C6a2Cg7N.woff2",
+      "assets/gotham-medium-CTRdVB-J.woff2",
+      "assets/gotham-bold-5XChUxNd.woff2",
+      "assets/inter-bold-B0RMAd2-.woff2"
+    ]
+  },
+  "resources/js/demo.js": {
+    "file": "assets/demo-B71XEWAc.js",
+    "name": "demo",
+    "src": "resources/js/demo.js",
+    "isEntry": true,
+    "css": [
+      "assets/demo-sSrOg4r8.css"
+    ]
+  }
+}

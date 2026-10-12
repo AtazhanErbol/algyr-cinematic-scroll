@@ -1,0 +1,13 @@
+{
+  "output": "media-source/camera-prepared.mp4",
+  "frames": 240,
+  "fps": 24.0,
+  "first_overlay_frame": 96,
+  "painted_frames": 143,
+  "screen_canvas": [
+    1280,
+    720
+  ],
+  "outside_display_changes_before_encoding": 0,
+  "aspect_correction": "Complete letterboxed screenshot; no end-of-video Y compression."
+}

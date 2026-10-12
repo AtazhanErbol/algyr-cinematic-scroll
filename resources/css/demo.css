@@ -1,0 +1,25 @@
+.algyr-demo { margin:0;padding-top:102px;font-family:'Algyr Gotham',Arial,sans-serif;font-size:16px;line-height:1.5;color:#212121;background:#fff; }
+.algyr-demo * { box-sizing:border-box; }
+.algyr-demo a { text-decoration:none;color:inherit; }
+.algyr-demo .header { position:fixed;inset:0 0 auto;z-index:20;background:#fff;border-bottom:1px solid #f1f1f1;height:102px; }
+.algyr-demo-header-inner { max-width:1240px;height:100%;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:28px; }
+.algyr-demo-logo { display:block;width:146px;flex:none; }
+.algyr-demo-logo img { width:100%;height:auto;display:block; }
+.algyr-demo-nav { display:flex;gap:26px;align-items:center; }
+.algyr-demo-nav a { font-size:14px;font-weight:500;color:#050038; }
+.algyr-demo-nav a:first-child { color:#7130f0; }
+.algyr-demo-author { display:flex;gap:10px;align-items:center;color:#050038;font-weight:500;white-space:nowrap; }
+.algyr-demo-author svg { width:38px;height:38px; }
+.algyr-demo-login { display:inline-flex;padding:7px 30px;border-radius:30px;background:#7130f0;color:#fff!important;font-size:14px;font-weight:500; }
+.algyr-demo-before { height:56px; }
+.algyr-demo-learning { max-width:1240px;margin:auto;padding:90px 0; }
+.algyr-demo-learning h2 { color:#050038;font-family:'Algyr Inter',Arial,sans-serif;font-size:40px;letter-spacing:-1px;line-height:1.15;text-align:center;margin:0 0 42px; }
+.algyr-demo-learning-steps { display:grid;grid-template-columns:repeat(3,1fr);gap:24px; }
+.algyr-demo-learning-steps > div { padding:28px;border-radius:15px;background:#f8f5ff; }
+.algyr-demo-learning-steps h3 { font-size:18px;font-weight:500;color:#7130f0;margin:0 0 12px; }
+.algyr-demo-learning-steps p { color:#696688;font-size:14px;line-height:22px;margin:0; }
+.algyr-demo-footer { padding:24px;text-align:center;font-size:12px;color:#696688;border-top:1px solid #f1f1f1; }
+.algyr-demo a:focus-visible { outline:2px solid #7130f0;outline-offset:5px; }
+@media(max-width:1300px) { .algyr-demo-header-inner,.algyr-demo-learning { margin-inline:24px; } .algyr-demo-nav { gap:18px; } }
+@media(max-width:992px) { .algyr-demo { padding-top:68px; } .algyr-demo .header { height:68px; } .algyr-demo-nav { display:none; } .algyr-demo-header-inner { gap:16px;margin-inline:16px; } .algyr-demo-author { margin-left:auto;font-size:13px; } .algyr-demo-author svg { width:28px;height:28px; } .algyr-demo-learning h2 { font-size:32px; } }
+@media(max-width:600px) { .algyr-demo-logo { width:125px; } .algyr-demo-author { display:none; } .algyr-demo-login { margin-left:auto;padding:6px 24px; } .algyr-demo-before { height:24px; } .algyr-demo-learning { padding:56px 0;margin-inline:16px; } .algyr-demo-learning h2 { font-size:28px;margin-bottom:28px; } .algyr-demo-learning-steps { grid-template-columns:1fr; } }

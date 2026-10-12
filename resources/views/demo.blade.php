@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="kk">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#7130f0">
+ <meta name="description" content="ALGYR — сабақтар, тапсырмалар, тесттер және нәтижелер бір платформада.">
+ <title>ALGYR · Барлығы бір платформада</title>
+ @vite('resources/js/demo.js')
+</head>
+<body class="algyr-demo">
+ <header class="header" data-algyr-site-header>
+  <div class="algyr-demo-header-inner">
+   <a class="algyr-demo-logo" href="#top" aria-label="ALGYR"><img src="{{ asset('media/algyr/brand/logo.svg') }}" alt="ALGYR.kz" width="146" height="32"></a>
+   <nav class="algyr-demo-nav" aria-label="Сайт навигациясы"><a href="#platform">Платформа туралы</a><a href="#learning">Артықшылықтар</a><a href="https://algyr.kz/#work">Оқу қалай өтеді</a><a href="https://algyr.kz/#faq">Сұрақ-жауап</a></nav>
+   <div class="algyr-demo-author"><svg viewBox="0 0 38 38" aria-hidden="true"><path fill="#7130f0" d="M0 0h38v38H0z"/><path fill="#fff" d="M16.5471 13.0426L23.1665 17.6761V21.3167L16.5471 16.8487L9.92773 21.3167V8.73999H20.5187C26.0914 8.83257 30.4477 13.3906 30.4477 19C30.4477 24.6664 26.0024 29.26 20.5187 29.26H9.92773V24.2954L13.8994 21.9787V25.9503H20.5187C24.073 25.9503 27.1381 22.9417 27.1381 19C27.1381 15.0583 24.073 12.0497 20.5187 12.0497H13.8994V15.0284L16.5471 13.0426Z"/></svg>by Dauletten</div>
+   <a class="algyr-demo-login" href="https://algyr.kz/">Кіру</a>
+  </div>
+ </header>
+ <main id="top">
+  <div class="algyr-demo-before"></div>
+  <x-algyr-scroll id="platform" />
+  <section id="learning" class="algyr-demo-learning">
+   <h2>Бізді таңдау себептері</h2>
+   <div class="algyr-demo-learning-steps">
+    <div><h3>Онлайн сабақтар</h3><p>Интерактивті видео және конспектілер.</p></div>
+    <div><h3>Қатемен жұмыс</h3><p>Тест нәтижесін талдап, тақырыпты жақсы меңгеріңіз.</p></div>
+    <div><h3>Жеке кабинет, куратор</h3><p>Оқу үрдісін бақылап, куратордан кері байланыс алыңыз.</p></div>
+   </div>
+  </section>
+ </main>
+ <footer class="algyr-demo-footer">ALGYR.kz · Блоктың жеке демонстрациясы</footer>
+</body>
+</html>
