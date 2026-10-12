@@ -57,20 +57,42 @@ export function mount(root,dependencies={}){
  let context,timeline,trigger,nearObserver,resizeObserver,preloadPromise;
  let ready=false,dead=false,failed=false,near=false,forceStatic=false,mode='',active=-2,raf=0,refreshTimer=0,pinOffset=0,steps=[];
  const driver={frame:0,hold:0};
- const sequence=new FrameSequence(canvas,config.sequence,()=>{failed=true;ready=false;root.dataset.loadError='true';selectMode();});
- const eligible=()=>innerWidth>Number(config.mobileBreakpoint)&&innerHeight>=520&&!reduce.matches&&!forceStatic;
+ const compact=()=>innerWidth<=Number(config.mobileBreakpoint)||matchMedia('(pointer: coarse)').matches;
+ const animated=()=>mode==='desktop'||mode==='mobile';
+ const eligible=()=>!reduce.matches&&!forceStatic;
+ let sequence,variant;
+ function selectSequence(){
+  const next=compact()&&config.mobileSequence?'mobile':'desktop';
+  if(next===variant)return;
+  if(sequence){clearDesktop();sequence.destroy();}
+  variant=next;ready=false;failed=false;preloadPromise=null;delete root.dataset.loadError;
+  const source=variant==='mobile'?config.mobileSequence:config.sequence;
+  canvas.width=source.width;canvas.height=source.height;
+  const current=new FrameSequence(canvas,source,()=>{
+   if(dead||current!==sequence)return;
+   failed=true;ready=false;root.dataset.loadError='true';selectMode();
+  });
+  sequence=current;
+  config.screens.forEach((screen,i)=>{
+   const src=variant==='mobile'?(screen.mobileSrc||screen.src):screen.src;
+   shots[i].querySelector('img').src=src;slides[i].querySelector('img').src=src;slides[i].querySelector('a').href=src;
+  });
+ }
  const measure=()=>{
   root.style.setProperty('--algyr-scroll-width',root.getBoundingClientRect().width+'px');
   const fixed=header&&['fixed','sticky'].includes(getComputedStyle(header).position);
   pinOffset=config.pinTop==='auto'?(fixed?Math.ceil(header.getBoundingClientRect().height):0):Number(config.pinTop)||0;
   root.style.setProperty('--algyr-scroll-pin-top',pinOffset+'px');
-  if(root.dataset.mode==='desktop'){
+  if(animated()){
    const heading=$('.algyr-scroll-heading'),actions=$('.algyr-scroll-actions');
    const css=getComputedStyle(stage),headCss=getComputedStyle(heading),actionCss=getComputedStyle(actions);
    const available=stage.getBoundingClientRect().height-parseFloat(css.paddingTop)-parseFloat(css.paddingBottom)
     -heading.getBoundingClientRect().height-parseFloat(headCss.marginBottom)
     -details.getBoundingClientRect().height-14-actions.getBoundingClientRect().height-parseFloat(actionCss.marginTop);
-   root.style.setProperty('--algyr-scroll-media-width',Math.max(160,available)*16/9+'px');
+   const landscape=innerHeight<520&&innerWidth>innerHeight;
+   const room=landscape?stage.getBoundingClientRect().height-parseFloat(css.paddingTop)-parseFloat(css.paddingBottom)
+    -heading.getBoundingClientRect().height-parseFloat(headCss.marginBottom)-actions.getBoundingClientRect().height-parseFloat(actionCss.marginTop):available;
+   root.style.setProperty('--algyr-scroll-media-width',Math.max(64,room)*16/9+'px');
   }
  };
  function updateStep(index){
@@ -87,7 +109,7 @@ export function mount(root,dependencies={}){
   shots.forEach((shot,i)=>{const at=steps[i];shot.style.willChange=i>0&&Math.abs(time-at)<.03?'mask-position':'';});
  };
  function buildDesktop(){
-  mode='desktop';root.dataset.mode=mode;measure();
+  root.dataset.animated='true';measure();
   gallery.setAttribute('aria-hidden','true');gallery.inert=true;sequence.start();
   driver.frame=0;
   context=gsap.context(()=>{
@@ -99,13 +121,14 @@ export function mount(root,dependencies={}){
    shots.slice(1).forEach(shot=>gsap.set(shot,{visibility:'visible',maskSize:(2+edge)*100+'% 100%',webkitMaskSize:(2+edge)*100+'% 100%',maskPosition:'0% 0%',webkitMaskPosition:'0% 0%'}));
    timeline=gsap.timeline({defaults:{ease:'none'},onUpdate,scrollTrigger:{
     id:root.id,trigger:root,pin:stage,pinSpacing:true,start:()=>'top top+='+pinOffset,
-    end:()=>'+='+Math.round(innerHeight*clamp(Number(config.scrollScreens)||4,3.5,4.5)),
+    end:()=>'+='+Math.round((mode==='mobile'?stage.getBoundingClientRect().height+pinOffset:innerHeight)
+     *clamp(Number(mode==='mobile'?config.mobileScrollScreens:config.scrollScreens)||4,2.5,4.5)),
     scrub:clamp(Number(config.scrub)||.75,.5,1),invalidateOnRefresh:true,
     onRefreshInit:measure,onRefresh:()=>{measure();smoothing?.lenis.resize();onUpdate();},
     onToggle:self=>{root.dataset.pinned=String(self.isActive);},
    }});
    trigger=timeline.scrollTrigger;api.trigger=trigger;
-   timeline.fromTo(driver,{frame:0},{frame:config.sequence.count-1,duration:phases.videoEnd-phases.videoStart,immediateRender:true},phases.videoStart);
+   timeline.fromTo(driver,{frame:0},{frame:sequence.config.count-1,duration:phases.videoEnd-phases.videoStart,immediateRender:true},phases.videoStart);
    const fade=phases.screensStart-phases.videoEnd;
    timeline.to(flat,{autoAlpha:1,duration:fade},phases.videoEnd);
    timeline.to(details,{autoAlpha:1,duration:fade},phases.videoEnd);
@@ -125,23 +148,25 @@ export function mount(root,dependencies={}){
    timeline.to($('[data-algyr-progress]'),{scaleX:1,duration:phases.screensEnd-phases.videoEnd},phases.videoEnd);
    onUpdate();
   },root);
-  acquireSmoothing(root,config,gsap,ScrollTrigger,dependencies.lenis);
+  if(mode==='desktop')acquireSmoothing(root,config,gsap,ScrollTrigger,dependencies.lenis);
   toggle.hidden=false;queueRefresh();
  }
  function clearDesktop(){
   releaseSmoothing(root);context?.revert();context=null;timeline=null;trigger=null;api.trigger=null;
+  delete root.dataset.animated;
   root.dataset.pinned='false';gallery.inert=false;gallery.removeAttribute('aria-hidden');
   details.inert=false;details.removeAttribute('aria-hidden');
   shots.forEach(s=>s.style.willChange='');active=-2;
  }
  function selectMode(){
   if(dead)return;
-  const next=forceStatic||reduce.matches?'static':innerWidth<=Number(config.mobileBreakpoint)?'mobile':innerHeight<520||failed||!sequence.context?'gallery':ready?'desktop':'loading';
+  selectSequence();
+  const next=forceStatic||reduce.matches?'static':failed||!sequence.context?'gallery':ready?(compact()?'mobile':'desktop'):'loading';
   if(next===mode)return;
   clearDesktop();mode=next;root.dataset.mode=next;root.dataset.staticChoice=String(forceStatic);
-  toggle.hidden=reduce.matches||(mode!=='desktop'&&!forceStatic);
+  toggle.hidden=reduce.matches||(!animated()&&!forceStatic);
   toggle.setAttribute('aria-pressed',String(forceStatic));toggle.textContent=forceStatic?toggle.dataset.motionLabel:toggle.dataset.staticLabel;
-  if(next==='desktop')buildDesktop();
+  if(animated())buildDesktop();
   else {if(next!=='loading')sequence.stop();updateStep(next==='static'?slides.length-1:0);}
   measure();queueRefresh();
  }
@@ -154,18 +179,21 @@ export function mount(root,dependencies={}){
    image.onload=async()=>{clearTimeout(timer);try{await image.decode();}catch{}resolve();};
    image.onerror=()=>{clearTimeout(timer);reject(new Error('Image unavailable'));};image.src=src;
   });
-  preloadPromise=Promise.all([sequence.start(),...config.screens.map(s=>loadImage(s.src))]).then(()=>{
-   if(dead||!eligible())return;
-   ready=sequence.blobs.has(0)&&!failed;selectMode();queueRefresh();
-  }).catch(()=>{if(eligible()){failed=true;root.dataset.loadError='true';selectMode();}}).finally(()=>{
+  const current=sequence;
+  const pending=Promise.all([current.start(),...config.screens.map(s=>loadImage(variant==='mobile'?(s.mobileSrc||s.src):s.src))]).then(()=>{
+   if(dead||!eligible()||current!==sequence)return;
+   ready=current.blobs.has(0)&&!failed;selectMode();queueRefresh();
+  }).catch(()=>{if(!dead&&current===sequence&&eligible()){failed=true;root.dataset.loadError='true';selectMode();}}).finally(()=>{
+   if(preloadPromise!==pending)return;
    preloadPromise=null;
    // A resize can cancel decoding while the screenshot preload is still pending.
    if(!dead&&near&&eligible()&&!ready&&!failed)queueMicrotask(preload);
   });
+  preloadPromise=pending;
   return preloadPromise;
  }
  function navigate(index){
-  if(mode==='desktop'&&trigger){
+  if(animated()&&trigger){
    const next=steps[index+1]??phases.screensEnd;
    const fraction=(steps[index]+next)/2;
    scrollToY(trigger.start+(trigger.end-trigger.start)*fraction);
@@ -173,7 +201,7 @@ export function mount(root,dependencies={}){
  }
  dots.forEach((d,i)=>d.addEventListener('click',()=>navigate(i),{signal:events.signal}));
  gallery.addEventListener('scroll',()=>{
-  if(mode==='desktop'||mode==='static'||raf)return;
+  if(animated()||mode==='static'||raf)return;
   raf=requestAnimationFrame(()=>{raf=0;updateStep(clamp(Math.round(gallery.scrollLeft/(gallery.clientWidth+20)),0,slides.length-1));});
  },{passive:true,signal:events.signal});
  gallery.addEventListener('keydown',event=>{
@@ -189,7 +217,7 @@ export function mount(root,dependencies={}){
  all('img').forEach(img=>img.addEventListener('load',queueRefresh,{signal:events.signal}));
  const api={
   trigger:null,
-  getState:()=>({mode,ready,progress:timeline?.progress()||0,scene:config.screens[active]?.key||'student',
+  getState:()=>({mode,ready,variant,progress:timeline?.progress()||0,scene:config.screens[active]?.key||'student',
    start:trigger?.start||0,end:trigger?.end||0,pinOffset,steps,phases,currentStep:active,...sequence.state(),
    nativePlayerElements:root.querySelectorAll('video,audio').length,lenis:Boolean(smoothing),ownedLenis:Boolean(smoothing?.owned)}),
   destroy(){

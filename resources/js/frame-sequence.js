@@ -6,7 +6,7 @@ export class FrameSequence {
         this.config=config; this.onError=onError;
         this.blobs=new Map(); this.images=new Map(); this.pending=new Map(); this.decoding=new Map();
         this.queue=[]; this.active=false; this.generation=0; this.wanted=0; this.drawn=-1;
-        this.bytes=0; this.failures=0; this.maxDecoded=10;
+        this.bytes=0; this.failures=0; this.maxDecoded=config.maxDecoded||10;
     }
     url(index) { return this.config.template.replace('{index}',String(index).padStart(this.config.digits||3,'0')); }
     async start() {

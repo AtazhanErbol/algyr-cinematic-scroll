@@ -31,6 +31,8 @@ required = [
     *[f'lang/{locale}/algyr-platform.php' for locale in ['kk', 'ru', 'en']],
     *[f'public/media/algyr/platform/{name}.webp' for name in ['poster', 'poster-mobile', *[f'shot-{i}' for i in range(1, 7)]]],
     *[f'public/media/algyr/platform/frames/f_{i:03d}.webp' for i in range(120)],
+    *[f'public/media/algyr/platform/frames-mobile/f_{i:03d}.webp' for i in range(120)],
+    *[f'public/media/algyr/platform/shots-mobile/shot-{i}.webp' for i in range(1,7)],
 ]
 
 def manifest(items):
@@ -53,7 +55,7 @@ def archive(name, items, prefix=''):
         assert 'README.md' in names
         assert not any(name.startswith(('vendor/', 'node_modules/', 'work-media/', 'output/')) or name == '.env' for name in names)
         assert not any(name.startswith('public/media/algyr/frames/') or name.endswith(('journey-desktop.mp4', 'journey-mobile.mp4')) for name in names)
-        assert len([name for name in names if name.startswith('public/media/algyr/platform/') and name.endswith('.webp')]) == 128
+        assert len([name for name in names if name.startswith('public/media/algyr/platform/') and name.endswith('.webp')]) == 254
         assert not any(name.endswith(('platform/scene.webp', 'platform/background.webp')) for name in names)
         assert len([name for name in names if name.startswith('public/vendor/algyr-scroll/assets/') and name.endswith('.woff2')]) == 4
         for path, data in json.loads(payload).items():
@@ -65,7 +67,28 @@ def archive(name, items, prefix=''):
 minimal = [(file, name) for file, name in files if name in required or name.startswith(('public/vendor/algyr-scroll/', 'public/media/algyr/platform/', 'public/media/algyr/brand/', 'docs/licenses/')) or name in ['docs/ASSETS.md', 'docs/STORYBOARD.md', 'docs/VALIDATION.md', 'docs/browser-results.json', 'docs/scroll-regressions.json', 'docs/video-aspect-check.json', 'docs/MEDIA-REPORT.json', 'docs/THIRD-PARTY-NOTICES.md']]
 minimal += [(root/'docs/INTEGRATION.md', 'README.md')]
 minimal += [(root/name, name) for name in ['docs/media-browser-results.json', 'docs/screen-composite-check.json', 'docs/screen-tracking-check.json']]
+def html_archive():
+    source=root/'standalone'
+    destination=root.parent/'ALGYR-HTML-Block.zip'
+    items=[(file,file.relative_to(source).as_posix()) for file in sorted(source.rglob('*')) if file.is_file()]
+    with zipfile.ZipFile(destination,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=6) as zipped:
+        for file,name in items: zipped.write(file,name)
+        zipped.writestr('CONTENTS.json',json.dumps(manifest(items),indent=2,ensure_ascii=False))
+    with zipfile.ZipFile(destination) as zipped:
+        assert zipped.testzip() is None
+        names=zipped.namelist()
+        assert 'algyr-block/embed.js' in names and 'paste-this.html' in names
+        assert all(f'algyr-block/templates/{locale}.html' in names for locale in ['kk','ru','en'])
+        assert len([n for n in names if '/frames-mobile/' in n])==120
+        assert len([n for n in names if '/frames/' in n])==120
+        assert not any(n.endswith(('.php','.mp4','.env')) for n in names)
+        for name,data in manifest(items).items(): assert hashlib.sha256(zipped.read(name)).hexdigest()==data['sha256']
+    checksum=hashlib.sha256(destination.read_bytes()).hexdigest()
+    destination.with_suffix('.zip.sha256').write_text(f'{checksum}  {destination.name}\n',encoding='utf-8')
+    return {'zip':str(destination),'files':len(items)+1,'bytes':destination.stat().st_size,'sha256':checksum,'integrity':'passed'}
+
 print(json.dumps({
     'full': archive('ALGYR-Cinematic-Laravel.zip', files, 'algyr-cinematic/'),
-    'integration': archive('ALGYR-Block-Integration.zip', minimal)
+    'integration': archive('ALGYR-Block-Integration.zip', minimal),
+    'html': html_archive()
 }, indent=2))

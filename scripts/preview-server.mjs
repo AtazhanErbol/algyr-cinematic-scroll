@@ -8,13 +8,15 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const port = Number(process.argv[2] || 8080);
 if (!Number.isInteger(port) || port < 1024 || port > 65535) throw new Error('Port must be 1024–65535');
 const types = { '.html':'text/html; charset=utf-8', '.js':'text/javascript; charset=utf-8', '.css':'text/css; charset=utf-8', '.json':'application/json', '.png':'image/png', '.webp':'image/webp', '.svg':'image/svg+xml', '.mp4':'video/mp4', '.woff2':'font/woff2' };
-const allowed = ['preview', 'public/build', 'public/vendor/algyr-scroll', 'public/media', 'public/favicon.svg'].map(item => path.resolve(root, item));
+const allowed = ['preview', 'standalone', 'public/build', 'public/vendor/algyr-scroll', 'public/media', 'public/favicon.svg'].map(item => path.resolve(root, item));
 http.createServer(async (request, response) => {
     try {
         if (!['GET','HEAD'].includes(request.method)) { response.writeHead(405).end(); return; }
         let pathname = decodeURIComponent(new URL(request.url, 'http://127.0.0.1').pathname);
         if (pathname === '/') pathname = '/preview/index.html';
         if (pathname.startsWith('/build/')) pathname = '/public' + pathname;
+        if (pathname.startsWith('/algyr-block/')) pathname = '/standalone' + pathname;
+        if (pathname === '/standalone/') pathname = '/standalone/index.html';
         if (pathname === '/favicon.ico') { response.writeHead(204).end(); return; }
         const file = path.resolve(root, '.' + pathname);
         if (!allowed.some(prefix => file === prefix || file.startsWith(prefix + path.sep))) { response.writeHead(404).end(); return; }

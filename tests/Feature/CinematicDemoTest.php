@@ -71,6 +71,18 @@ class CinematicDemoTest extends TestCase
             $this->assertSame($title,$this->settings($html)[0]['screens'][0]['title']);
         }
     }
+    public function test_mobile_frames_are_light_and_match_the_mobile_handoff(): void
+    {
+        $frames=glob(public_path('media/algyr/platform/frames-mobile/f_*.webp'));
+        $this->assertCount(120,$frames);
+        $this->assertLessThan(3000000,array_sum(array_map('filesize',$frames)));
+        foreach($frames as $frame) $this->assertSame([720,405],array_slice(getimagesize($frame),0,2));
+        foreach(range(1,6) as $i) $this->assertSame([720,405],array_slice(getimagesize(public_path('media/algyr/platform/shots-mobile/shot-'.$i.'.webp')),0,2));
+        $this->assertSame(hash_file('sha256',public_path('media/algyr/platform/shots-mobile/shot-1.webp')),hash_file('sha256',end($frames)));
+        $settings=$this->settings(Blade::render('<x-algyr-scroll />'))[0];
+        $this->assertSame(6,$settings['mobileSequence']['maxDecoded']);
+        $this->assertSame(3.5,$settings['mobileScrollScreens']);
+    }
     public function test_config_attribute_and_text_cannot_inject_html(): void
     {
         $html=Blade::render('<x-algyr-scroll :media-base="$base" />',['base'=>'\" onmouseover=\"alert(1)</script><script>alert(2)</script>']);

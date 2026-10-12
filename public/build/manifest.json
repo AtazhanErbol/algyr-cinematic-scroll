@@ -16,12 +16,12 @@
     "src": "resources/fonts/inter-bold.woff2"
   },
   "resources/js/algyr-scroll-entry.js": {
-    "file": "assets/algyr-scroll-entry-Bs0eay1_.js",
+    "file": "assets/algyr-scroll-entry-CuBJPaDR.js",
     "name": "algyr-scroll-entry",
     "src": "resources/js/algyr-scroll-entry.js",
     "isEntry": true,
     "css": [
-      "assets/algyr-scroll-entry-zmuhYSm7.css"
+      "assets/algyr-scroll-entry-BIyZgoOY.css"
     ],
     "assets": [
       "assets/gotham-regular-C6a2Cg7N.woff2",

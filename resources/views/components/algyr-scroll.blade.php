@@ -7,6 +7,7 @@
     $screens = [];
     foreach (['courses', 'dashboard', 'lesson', 'results', 'test', 'profile'] as $index => $key) {
         $screens[] = ['key' => $key, 'src' => $base.'/platform/shot-'.($index + 1).'.webp?v='.$revision,
+            'mobileSrc' => $base.'/platform/shots-mobile/shot-'.($index + 1).'.webp?v='.$revision,
             'title' => __('algyr-platform.'.$key), 'description' => __('algyr-platform.'.$key.'_description')];
     }
     $settings = [
@@ -15,6 +16,8 @@
         'maskEdge' => config('algyr-scroll.mask_edge', 0.20),
         'phases' => config('algyr-scroll.phases'),
         'sequence' => array_merge(config('algyr-scroll.sequence'), ['template' => $base.'/'.config('algyr-scroll.sequence.template').'?v='.$revision]),
+        'mobileSequence' => array_merge(config('algyr-scroll.mobile_sequence'), ['template' => $base.'/'.config('algyr-scroll.mobile_sequence.template').'?v='.$revision]),
+        'mobileScrollScreens' => config('algyr-scroll.mobile_scroll_screens', 3.5),
         'lenis' => config('algyr-scroll.lenis', true),
         'lenisLerp' => config('algyr-scroll.lenis_lerp', 0.12),
         'pinTop' => $pinTop ?? config('algyr-scroll.pin_top', 'auto'),

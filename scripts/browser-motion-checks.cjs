@@ -3,7 +3,7 @@ async (page) => {
  const checks={},details={},errors=[],failures=[];
  const check=(name,value)=>{checks[name]=Boolean(value);if(!value)failures.push(name);};
  const get=p=>p.evaluate(()=>window.AlgyrScroll.getInstance(document.querySelector('[data-algyr-scroll]')).getState());
- const ready=p=>p.waitForFunction(()=>window.AlgyrScroll?.getInstance(document.querySelector('[data-algyr-scroll]'))?.getState().mode==='desktop');
+ const ready=async p=>{await p.waitForFunction(()=>window.AlgyrScroll?.getInstance(document.querySelector('[data-algyr-scroll]'))?.getState().ready);await p.waitForTimeout(400);};
  const go=async(p,f)=>{
   const s=await get(p);
   await p.evaluate(({s,f})=>window.scrollTo({top:s.start+(s.end-s.start)*f,behavior:'instant'}),{s,f});
@@ -13,17 +13,17 @@ async (page) => {
  };
  const canvas=p=>p.locator('[data-algyr-canvas]').evaluate(c=>c.toDataURL());
  const profiles=engine==='webkit'
- ? [{name:'safari-desktop',w:1440,h:900},{name:'iphone',w:390,h:844,touch:true},{name:'iphone-small',w:375,h:667,touch:true}]
- : [{name:'desktop',w:1440,h:900},{name:'desktop-large',w:1920,h:1080},{name:'laptop',w:1366,h:768},{name:'tablet',w:768,h:1024},{name:'android',w:412,h:915,touch:true},{name:'mobile-small',w:320,h:640,touch:true}];
+ ? [{name:'safari-desktop',w:1440,h:900},{name:'iphone',w:390,h:844,touch:true},{name:'iphone-small',w:375,h:667,touch:true},{name:'iphone-landscape',w:844,h:390,touch:true}]
+ : [{name:'desktop',w:1440,h:900},{name:'desktop-large',w:1920,h:1080},{name:'laptop',w:1366,h:768},{name:'tablet',w:768,h:1024},{name:'android',w:412,h:915,touch:true},{name:'mobile-small',w:320,h:568,touch:true},{name:'android-landscape',w:915,h:412,touch:true},{name:'tablet-touch',w:1024,h:768,touch:true}];
  for(const profile of profiles) {
   const ctx=await browser.newContext({viewport:{width:profile.w,height:profile.h},deviceScaleFactor:profile.touch?2:1,isMobile:!!profile.touch,hasTouch:!!profile.touch});
   const p=await ctx.newPage(),requests=[];
   p.on('pageerror',e=>errors.push(profile.name+': '+e.message));
   p.on('request',r=>requests.push(r.url()));
-  await p.goto('http://127.0.0.1:8010/');
+  await p.goto('http://127.0.0.1:8080/standalone/');
   await p.waitForFunction(()=>window.AlgyrScroll?.getInstance(document.querySelector('[data-algyr-scroll]')));
   await p.evaluate(()=>document.fonts.ready);
-  if(profile.w>=768){
+  {
    await ready(p);await go(p,.30);
    const s=await get(p);
    const rects=await p.evaluate(()=>{
@@ -31,24 +31,24 @@ async (page) => {
     return {top:stage.top,bottom:stage.bottom,actionsBottom:actions.bottom,ratio:m.width/m.height,horizontal:document.documentElement.scrollWidth-document.documentElement.clientWidth};
    });
    details[profile.name]={...s,...rects};
-   check(profile.name+'_400vh',Math.abs(s.end-s.start-profile.h*4)<1);
+   check(profile.name+'_pin_distance',Math.abs(s.end-s.start-profile.h*(profile.touch?3.5:4))<1);
    check(profile.name+'_header_clear',Math.abs(rects.top-s.pinOffset)<1);
    check(profile.name+'_stage_fits',rects.bottom<=profile.h+1&&rects.actionsBottom<=profile.h+1);
    check(profile.name+'_frame_scrub',s.frame===50&&s.desiredFrame===50);
    check(profile.name+'_no_overflow',rects.horizontal<=0);
    check(profile.name+'_equal_ratio',Math.abs(rects.ratio-16/9)<.005);
    check(profile.name+'_captions_hidden_during_camera',await p.locator('[data-algyr-details]').evaluate(e=>e.inert&&getComputedStyle(e).opacity==='0'));
-   check(profile.name+'_lenis',s.lenis&&s.ownedLenis);
+   check(profile.name+'_scroll_owner',profile.touch?!s.lenis:s.lenis&&s.ownedLenis);
    check(profile.name+'_no_native_player',s.nativePlayerElements===0&&!requests.some(url=>url.includes('.mp4')));
    check(profile.name+'_single_pin',await p.locator('.pin-spacer').count()===1);
    await p.screenshot({path:'output/playwright/'+profile.name+'-video-verified.png'});
-   if(profile.name==='desktop'||profile.name==='safari-desktop'){
+   if(['desktop','safari-desktop','iphone','android','mobile-small'].includes(profile.name)){
     await p.waitForFunction(()=>window.AlgyrScroll.getInstance(document.querySelector('[data-algyr-scroll]')).getState().loadedFrames===120);
     const loaded=await get(p);
-    const priority=requests.filter(u=>u.includes('/frames/')).slice(0,6).map(u=>new URL(u).pathname.split('/').pop());
+    const priority=requests.filter(u=>u.includes('/frames/')||u.includes('/frames-mobile/')).slice(0,6).map(u=>new URL(u).pathname.split('/').pop());
     details[profile.name].priority=priority;
     check(profile.name+'_progressive_prefetch',priority[0]==='f_000.webp'&&priority.slice(1,5).includes('f_119.webp')&&priority.slice(1,5).includes('f_010.webp'));
-    check(profile.name+'_frame_budget',loaded.sequenceBytes<=6000000&&loaded.loadedFrames===120&&loaded.decodedFrames<=10&&loaded.frameFailures===0);
+    check(profile.name+'_frame_budget',loaded.sequenceBytes<=(profile.touch?3000000:6000000)&&loaded.loadedFrames===120&&loaded.decodedFrames<=(profile.touch?6:10)&&loaded.frameFailures===0);
     await go(p,.30);const forward=await canvas(p);
     await p.waitForTimeout(600);check(profile.name+'_idle_canvas_frozen',forward===await canvas(p));
     await go(p,.55);check(profile.name+'_forward_video_changes',forward!==await canvas(p));
@@ -63,7 +63,7 @@ async (page) => {
     });
     details[profile.name].crossfadePixelDifference=endDiff;
     check(profile.name+'_exact_endframe_handoff',endDiff.max<=3&&endDiff.mean<.1&&(await get(p)).frame===119);
-    await go(p,.72);
+    await go(p,.724);
     check(profile.name+'_courses_first',(await get(p)).scene==='courses');
     check(profile.name+'_captions_now_visible',await p.locator('[data-algyr-details]').evaluate(e=>!e.inert&&Number(getComputedStyle(e).opacity)===1));
     const size=await p.locator('[data-algyr-media]').boundingBox();
@@ -91,8 +91,8 @@ async (page) => {
     await p.locator('[data-algyr-skip]').click();
     check(profile.name+'_skip_exits',await p.evaluate(()=>document.activeElement?.id==='platform-after'&&document.querySelector('#platform-after').getBoundingClientRect().top<innerHeight));
     await go(p,.45);
-    await p.setViewportSize({width:390,height:844});await p.waitForTimeout(300);
-    check(profile.name+'_resize_unpins',(await get(p)).mode==='mobile'&&await p.locator('.pin-spacer').count()===0&&(await get(p)).decodedFrames===0);
+    await p.setViewportSize({width:390,height:844});await ready(p);await p.waitForTimeout(400);
+    check(profile.name+'_resize_mobile_one_pin',(await get(p)).mode==='mobile'&&await p.locator('.pin-spacer').count()===1&&(await get(p)).variant==='mobile');
     await p.setViewportSize({width:1440,height:900});await ready(p);await p.waitForTimeout(300);
     check(profile.name+'_resize_restores_one_pin',await p.locator('.pin-spacer').count()===1);
     await go(p,.30);
@@ -105,20 +105,6 @@ async (page) => {
     check(profile.name+'_manual_animation_restore',await p.locator('.pin-spacer').count()===1);
     check(profile.name+'_no_cta',await p.locator('[data-algyr-cta]').count()===0);
    }
-  }else{
-   await p.waitForTimeout(400);
-   check(profile.name+'_mobile_no_pin',(await get(p)).mode==='mobile'&&await p.locator('.pin-spacer').count()===0);
-   check(profile.name+'_no_lenis',!(await get(p)).lenis);
-   check(profile.name+'_no_player',await p.locator('video,audio').count()===0&&!requests.some(url=>url.includes('.mp4')));
-   check(profile.name+'_no_video_frames',!requests.some(url=>url.includes('/frames/')));
-   check(profile.name+'_light_poster',await p.locator('.algyr-scroll-mobile-poster').isVisible());
-   check(profile.name+'_no_overflow',await p.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth));
-   const before=await p.locator('.algyr-scroll-gallery').evaluate(e=>e.scrollLeft);
-   await p.locator('[data-algyr-step="4"]').click();await p.waitForTimeout(250);
-   check(profile.name+'_swipe_navigation',(await get(p)).scene==='test'&&await p.locator('.algyr-scroll-gallery').evaluate(e=>e.scrollLeft)>before);
-   await p.locator('.algyr-scroll-gallery').focus();await p.keyboard.press('ArrowLeft');await p.waitForTimeout(250);
-   check(profile.name+'_keyboard_gallery',(await get(p)).scene==='results');
-   await p.screenshot({path:'output/playwright/'+profile.name+'-video-verified.png'});
   }
   await ctx.close();
  }
@@ -129,7 +115,7 @@ async (page) => {
   if(type==='failed-first-frame')await p.route('**/frames/f_000.webp*',r=>r.abort());
   if(type==='failed-screenshot')await p.route('**/platform/shot-2.webp*',r=>r.abort());
   if(type==='rapid-resize')await p.route('**/frames/f_000.webp*',async r=>{await new Promise(resolve=>setTimeout(resolve,500));await r.continue().catch(()=>{});});
-  await p.goto('http://127.0.0.1:8010/');
+  await p.goto(type==='no-js'?'http://127.0.0.1:8080/standalone/full-html-example.html':'http://127.0.0.1:8080/standalone/');
   if(type==='rapid-resize'){
    await p.waitForFunction(()=>window.AlgyrScroll?.getInstance(document.querySelector('[data-algyr-scroll]')));
    await p.setViewportSize({width:390,height:844});await p.waitForTimeout(50);
@@ -142,7 +128,7 @@ async (page) => {
    if(type==='reduced'){
     check(type+'_last_only',await p.locator('[data-algyr-slide="5"]').isVisible()&&!(await p.locator('[data-algyr-slide="0"]').isVisible()));
     check(type+'_no_lenis',!(await get(p)).lenis);
-    check(type+'_no_heavy_frames',!requests.some(url=>url.includes('/frames/')));
+    check(type+'_no_heavy_frames',!requests.some(url=>url.includes('/frames/')||url.includes('/frames-mobile/')));
    }
   }
   await ctx.close();
